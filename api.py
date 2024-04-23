@@ -4,8 +4,25 @@ from flask_sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
 api = Api(app)
+
+# Set the SQLAlchemy database connection URI
 app.config['SQLALCHEMY_DATABASE_URI'] = "sqlite:///database.db"
+
+# Set the debug mode to True/False 
+app.config["DEBUG"] = True
+
+# Initialize SQLAlchemy exxtention
 db = SQLAlchemy(app)
+
+@app.route('/', methods=['GET'])
+def home():
+    return """ <h1> Berlin Store locator RESTful API </h1>
+     <p>description here</p> """
+
+
+def get_all_districts():
+    #districts = District.query.all()
+    return jsonify({"message":"Sample message"})
 
 class DistrictModel(db.Model):
     district_id = db.Column(db.String(15), primary_key=True)
@@ -120,4 +137,4 @@ class District(Resource):
 api.add_resource(District, "/district/<string:district_id>")
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run()
