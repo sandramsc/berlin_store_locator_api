@@ -8,7 +8,7 @@ data = [{"district_id": "d88", "dist_name": "Milkll"},
 
 
 for i in range(len(data)):
-    response = requests.put(BASE + "district/" + str(i), data[i])
+    response = requests.get(BASE + "district/d88" + str(i), data[i])
 
 #print(response.json())
 
