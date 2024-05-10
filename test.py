@@ -1,16 +1,20 @@
 import requests
 
-BASE = "http://127.0.0.1:5000/"
+# Base URL of your API
+BASE_URL = "http://127.0.0.1:5000/"
 
-data = [{"district_id": "d88", "dist_name": "Milkll"},
-    {"district_id": "d89", "dist_name": "sssilkll"},
-]
+# District ID you want to retrieve
+district_id = "d1"
 
+# Make a GET request to the district endpoint
+response = requests.get(BASE_URL + f"district/{district_id}")
 
-for i in range(len(data)):
-    response = requests.get(BASE + "district/d88" + str(i), data[i])
-
-#print(response.json())
-
-#response = requests.get(BASE + "district/d88")
-#print(response.json())
+# Check if the request was successful
+if response.status_code == 200:
+    # Parse the response JSON data
+    district_data = response.json()
+    # Handle the retrieved district data
+    print("District data:", district_data)
+else:
+    # Handle the case when the district was not found or other errors
+    print("Failed to retrieve district. Status code:", response.status_code)

@@ -16,11 +16,35 @@ app.config["DEBUG"] = True
 # Initialize SQLAlchemy extention
 db = SQLAlchemy(app)
 
-@app.route('/', methods=['GET'])
+# Define the database models
+class District(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    district_id = db.Column(db.String(50), nullable=False, unique=True)
+    dist_name = db.Column(db.String(100), nullable=False)
+    stores = db.relationship('Store', backref='district', lazy=True)
 
+class Store(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    store_id = db.Column(db.String(50), nullable=False, unique=True)
+    store_name = db.Column(db.String(100), nullable=False)
+    address = db.Column(db.String(200), nullable=False)
+    district_id = db.Column(db.String(50), db.ForeignKey('district.district_id'), nullable=False)
+    products = db.relationship('Product', backref='store', lazy=True)
+
+class Product(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    item = db.Column(db.String(100), nullable=False)
+    price = db.Column(db.Float, nullable=False)
+    store_id = db.Column(db.String(50), db.ForeignKey('store.store_id'), nullable=False)
+
+# Create the database tables
+db.create_all()
+
+@app.route('/', methods=['GET'])
 def home():
     return """ <h1> Berlin Store locator RESTful API </h1>
      <p>description here</p> """
+
 
 def load_json():
     try:
@@ -30,275 +54,212 @@ def load_json():
         return data
     except Exception as error:
         current_app.logger.error(f"Error loading JSON file: {error}")
-        return None
+        return {}
 
-# Routes to retrieve all districts, stores, and products
-@app.route('/districts/all')
-def get_all_districts():
-    districts = load_json().get('districts', [])
-    return jsonify(districts)
 
-@app.route('/stores/all')
-def get_all_stores():
-    districts = load_json().get('districts', [])
-    stores = [store for district in districts for store in district.get('stores', [])]
-    return jsonify(stores)
-
-@app.route('/products/all')
-def get_all_products():
-    districts = load_json().get('districts', [])
-    products = [product for district in districts for store in district.get('stores', []) for product in store.get('products', [])]
-    return jsonify(products)
-    
-@app.route('/showjson', methods=['GET'])
-def showjson():
-    data = load_json()
-    if data:
-        return render_template('showjson.jade', data=data)
-    else:
-        return "Error loading JSON file", 500
-      
-class DistrictModel(db.Model):
-    district_id = db.Column(db.String(15), primary_key=True)
-    dist_name = db.Column(db.String(20), nullable=False)
-
-class StoreModel(db.Model):
-    store_id = db.Column(db.String(5), primary_key=True)
-    store_name = db.Column(db.String(30), nullable=False)
-    address = db.Column(db.String(100))
-    district_id = db.Column(db.Integer, db.ForeignKey('district_model.district_id'), nullable=False)
-
-class ProductModel(db.Model):
-    item = db.Column(db.String(100), primary_key=True)
-    price = db.Column(db.Float)
-    store_id = db.Column(db.Integer, db.ForeignKey('store_model.store_id'), nullable=False)
-
-    # Happens only if you choose to print the representation of the above object
-    def __repr__(self):
-        return f"District(district_id={self.district_id},  dist_name={self.dist_name})"
-    
-    def __repr__(self):
-        return f"Store(store_id={self.store_id}, store_name={self.store_name}, price{self.price}, address={self.address})"
-    
-    def __repr__(self):
-        return f"Product(price{self.price}, item={self.item})"
-
-db.create_all()
-
-# Request parser for the districts
+# Request parser for PUT and PATCH requests for District
 district_put_args = reqparse.RequestParser()
-district_put_args.add_argument("district_id", type=str, help="The ID of the district", required=True)
-district_put_args.add_argument("dist_name", type=str, help="The name of the district", required=True)
-district_put_args.add_argument("stores", type=str, help="The name of the store", required=True)
+district_put_args.add_argument("district_id", type=str, help="ID of the district", required=True)
+district_put_args.add_argument("dist_name", type=str, help="Name of the district", required=True)
+district_put_args.add_argument("stores", type=str, help="Stores in the district", required=True)
 
-# Update the districts
 district_update_args = reqparse.RequestParser()
-district_update_args.add_argument("district_id", type=str, help="The ID of the district")
-district_update_args.add_argument("dist_name", type=str, help="The name of the district")
-district_update_args.add_argument("stores", type=str, help="The name of the stores")
+district_update_args.add_argument("district_id", type=str, help="ID of the district")
+district_update_args.add_argument("dist_name", type=str, help="Name of the district")
+district_update_args.add_argument("stores", type=str, help="Stores in the district")
 
-# Request parser for the stores
+# Request parser for PUT and PATCH requests for Store
 store_put_args = reqparse.RequestParser()
-store_put_args.add_argument("store_id", type=str, help="The ID of the store", required=True)
-store_put_args.add_argument("store_name", type=str, help="The name of the store", required=True)
-store_put_args.add_argument("address", type=str, help="The address of the store", required=True)
+store_put_args.add_argument("store_id", type=str, help="ID of the store", required=True)
+store_put_args.add_argument("store_name", type=str, help="Name of the store", required=True)
+store_put_args.add_argument("address", type=str, help="Address of the store", required=True)
 
-# Update the stores
 store_update_args = reqparse.RequestParser()
-store_update_args.add_argument("store_id", type=str, help="The ID of the store", required=True)
-store_update_args.add_argument("store_name", type=str, help="The name of the store", required=True)
-store_update_args.add_argument("address", type=str, help="The address of the store", required=True)
+store_update_args.add_argument("store_id", type=str, help="ID of the store")
+store_update_args.add_argument("store_name", type=str, help="Name of the store")
+store_update_args.add_argument("address", type=str, help="Address of the store")
 
-# Request parser for the products
+# Request parser for PUT and PATCH requests for Product
 product_put_args = reqparse.RequestParser()
-product_put_args.add_argument("item", type=str, help="The name of the product", required=True)
-product_put_args.add_argument("price", type=float, help="The price of the product", required=True)
+product_put_args.add_argument("item", type=str, help="Name of the product", required=True)
+product_put_args.add_argument("price", type=float, help="Price of the product", required=True)
 
-# Update the products
 product_update_args = reqparse.RequestParser()
-product_update_args.add_argument("item", type=str, help="The name of the product", required=True)
-product_update_args.add_argument("price", type=float, help="The price of the product", required=True)
+product_update_args.add_argument("item", type=str, help="Name of the product")
+product_update_args.add_argument("price", type=float, help="Price of the product")
 
-
-# Request parser for Stores with nested products
-product_struct = {
-    "item": product_put_args,
-    "price": product_put_args, 
-}
-
-# Request parser for Stores with nested products
-store_struct = {
-    "store_id": store_put_args,
-    "store_name": store_put_args, 
-    "address": store_put_args,
-    "products": [product_struct]
-}
-
-# Request parser for districts with nested stores
-district_struct = {
-    "district_id": district_put_args,
-    "dist_name": district_put_args,
-    "stores": [store_struct]
-}
-
+# Resource fields for marshalling
 resource_fields = {
     'district_id': fields.String,
-    'store_name': fields.String,
-    'store_id': fields.String,
     'dist_name': fields.String,
-    'products': fields.String,
-    'address': fields.String,
-    'price': fields.Float
+    'stores': fields.List(fields.Nested({
+        'store_id': fields.String,
+        'store_name': fields.String,
+        'address': fields.String,
+        'products': fields.List(fields.Nested({
+            'item': fields.String,
+            'price': fields.Float
+        }))
+    }))
 }
 
 
-# Create a resource for District
 class District(Resource):
     @marshal_with(resource_fields)
     def get(self, district_id):
-        result = DistrictModel.query.filter_by(district_id=district_id).first()
-        if not result:
+        data = load_json()
+        if district_id not in data.get('districts', {}):
             abort(404, message="District ID not found")
-        return result
+        return data['districts'][district_id], 200
 
     @marshal_with(resource_fields)
     def put(self, district_id):
         args = district_put_args.parse_args()
-        print("Received arguments:", args)
-        result = DistrictModel.query.filter_by(district_id=district_id).first()
-        if result:
-            abort(409, message="District ID already taken.")
-            
-        district = DistrictModel(district_id=args['district_id'], dist_name=args['dist_name'], stores=args['stores'])
-        print("New district to be inserted", district)
-        db.session.add(district)
-        db.session.commit()
-        print("District inserted successfully!")
+        data = load_json()
+
+        # Ensure 'districts' is a dictionary
+        if 'districts' not in data or not isinstance(data['districts'], dict):
+            data['districts'] = {}
+
+        # Add error handling and print statement here
+        try:
+            stores_data = args.get("stores", "")
+            print("Stores data:", stores_data)  # Print the stores data for inspection
+            stores = json.loads(stores_data)
+        except json.JSONDecodeError as e:
+            print("Error decoding JSON:", e)
+            return {"error": "Invalid JSON data"}, 400  # Return an error response
+
+        # Create district instance
+        district = {
+            'district_id': args['district_id'],
+            'dist_name': args['dist_name'],
+            "stores": stores
+        }
+
+        data['districts'][district_id] = district
         return district, 201
+
 
     @marshal_with(resource_fields)
     def patch(self, district_id):
         args = district_update_args.parse_args()
-        result = DistrictModel.query.filter_by(district_id=district_id).first()
-        if not result:
-            abort(404, message="District doesn't exist, therefore cannot update.") 
+        data = load_json()
+        if district_id not in data.get('districts', {}):
+            abort(404, message="District ID not found")
 
-        # Check if values are not None - that they exist
+        district = data['districts'][district_id]
         if args['district_id']:
-            result.district_id = args['district_id']
+            district['district_id'] = args['district_id']
         if args['dist_name']:
-            result.dist_name = args['dist_name']
+            district['dist_name'] = args['dist_name']
         if args['stores']:
-            result.stores = args['stores']
-        
-        db.session.commit()
-        return result
+            district['stores'] = json.loads(args['stores'])
 
+        return district
 
     def delete(self, district_id):
-        exit_if_district_id_doesnt_exist(district_id)
-        del districts[district_id]
+        data = load_json()
+        if district_id not in data.get('districts', {}):
+            abort(404, message="District ID not found")
+        del data['districts'][district_id]
         return '', 204
 
-
-# Create a resource for Store
 class Store(Resource):
     @marshal_with(resource_fields)
     def get(self, store_id):
-        result = StoreModel.query.filter_by(store_id=store_id).first()
-        if not result:
+        data = load_json()
+        if store_id not in data.get('stores', {}):
             abort(404, message="Store ID not found")
-        return result
+        return data['stores'][store_id], 200
 
     @marshal_with(resource_fields)
     def put(self, store_id):
         args = store_put_args.parse_args()
-        print("Received arguments:", args)
-        result = StoreModel.query.filter_by(store_id=store_id).first()
-        if result:
+        data = load_json()
+        if store_id in data.get('stores', {}):
             abort(409, message="Store ID already taken.")
-            
-        store = StoreModel(store_id=args['store_id'], store_name=args['store_name'], address=args['address'])
-        print("New store to be inserted", store)
-        db.session.add(store)
-        db.session.commit()
-        print("Store inserted successfully!")
+
+        store = {
+            'store_id': args['store_id'],
+            'store_name': args['store_name'],
+            'address': args['address']
+        }
+        data['stores'][store_id] = store
         return store, 201
 
     @marshal_with(resource_fields)
     def patch(self, store_id):
         args = store_update_args.parse_args()
-        result = StoreModel.query.filter_by(store_id=store_id).first()
-        if not result:
-            abort(404, message="Store doesn't exist, therefore cannot update.") 
+        data = load_json()
+        if store_id not in data.get('stores', {}):
+            abort(404, message="Store ID not found")
 
-        # Check if values are not None - that they exist
+        store = data['stores'][store_id]
         if args['store_id']:
-            result.store_id = args['store_id']
+            store['store_id'] = args['store_id']
         if args['store_name']:
-            result.store_name = args['store_name']
+            store['store_name'] = args['store_name']
         if args['address']:
-            result.address = args['address']
-        
-        db.session.commit()
-        return result
+            store['address'] = args['address']
 
+        return store
 
     def delete(self, store_id):
-        exit_if_store_id_doesnt_exist(store_id)
-        del stores[store_id]
+        data = load_json()
+        if store_id not in data.get('stores', {}):
+            abort(404, message="Store ID not found")
+        del data['stores'][store_id]
         return '', 204
-    
 
-# Create a resource for Products
 class Product(Resource):
     @marshal_with(resource_fields)
     def get(self, item):
-        result = ProductModel.query.filter_by(item=item).first()
-        if not result:
-            abort(404, message="Item not found")
-        return result
+        data = load_json()
+        if item not in data.get('products', {}):
+            abort(404, message="Product not found")
+        return data['products'][item], 200
 
     @marshal_with(resource_fields)
     def put(self, item):
         args = product_put_args.parse_args()
-        print("Received arguments:", args)
-        result = ProductModel.query.filter_by(item=item).first()
-        if result:
-            abort(409, message="Item already taken.")
-            
-        product = ProductModel(item=args['item'], dist_name=args['dist_name'], stores=args['stores'])
-        print("New item to be inserted", product)
-        db.session.add(product)
-        db.session.commit()
-        print("Product inserted successfully!")
+        data = load_json()
+        if item in data.get('products', {}):
+            abort(409, message="Product already taken.")
+
+        product = {
+            'item': args['item'],
+            'price': args['price']
+        }
+        data['products'][item] = product
         return product, 201
 
     @marshal_with(resource_fields)
     def patch(self, item):
         args = product_update_args.parse_args()
-        result = ProductModel.query.filter_by(item=item).first()
-        if not result:
-            abort(404, message="Product doesn't exist, therefore cannot update.") 
+        data = load_json()
+        if item not in data.get('products', {}):
+            abort(404, message="Product not found")
 
-        # Check if values are not None - that they exist
+        product = data['products'][item]
         if args['item']:
-            result.item = args['item']
+            product['item'] = args['item']
         if args['price']:
-            result.price = args['price']
-        
-        db.session.commit()
-        return result
+            product['price'] = args['price']
 
+        return product
 
     def delete(self, item):
-        exit_if_item_doesnt_exist(item)
-        del districts[item]
+        data = load_json()
+        if item not in data.get('products', {}):
+            abort(404, message="Product not found")
+        del data['products'][item]
         return '', 204
 
 api.add_resource(District, "/district/<string:district_id>")
 api.add_resource(Store, "/store/<string:store_id>")
 api.add_resource(Product, "/product/<string:item>")
+
 
 if __name__ == "__main__":
     app.run()
