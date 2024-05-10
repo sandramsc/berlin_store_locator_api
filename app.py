@@ -16,6 +16,42 @@ app.config["DEBUG"] = True
 # Initialize SQLAlchemy extention
 db = SQLAlchemy(app)
 
+def load_json():
+    try:
+        json_path = os.path.join(current_app.root_path, 'berlin_store_locator.json')
+        with open(json_path) as json_file:
+            data = json.load(json_file)
+        return data
+    except Exception as error:
+        current_app.logger.error(f"Error loading JSON file: {error}")
+        return data
+
+# Routes to retrieve all districts, stores, and products
+@app.route('/districts/all')
+def get_all_districts():
+    districts = load_json().get('districts', [])
+    return jsonify(districts)
+
+@app.route('/stores/all')
+def get_all_stores():
+    districts = load_json().get('districts', [])
+    stores = [store for district in districts for store in district.get('stores', [])]
+    return jsonify(stores)
+
+@app.route('/products/all')
+def get_all_products():
+    districts = load_json().get('districts', [])
+    products = [product for district in districts for store in district.get('stores', []) for product in store.get('products', [])]
+    return jsonify(products)
+    
+@app.route('/showjson', methods=['GET'])
+def showjson():
+    data = load_json()
+    if data:
+        return render_template('showjson.jade', data=data)
+    else:
+        return "Error loading JSON file", 500
+
 # Define the database models
 class District(db.Model):
     id = db.Column(db.Integer, primary_key=True)
