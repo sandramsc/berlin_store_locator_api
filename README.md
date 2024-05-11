@@ -3,13 +3,13 @@
 ## Development Process
 
 1. Creating REST API in Python using Flask
-2. How to run a Python App locally.
-3. Containerize the API
+2. Ran the REST API locally.
+3. Containerized the REST API
     1. Created Dockerfile
-    2. Built DockerImage
+    2. Built Docker Image
     3. Ran Docker Container
-4. Created ECR repository using Python Boto3 and pushing Docker Image to ECR
-5. Used Kubernetes concepts and Created EKS cluster and Nodegroups
+4. Created ECR repository using Python Boto3 and pushed Docker Image to ECR
+5. Created EKS cluster and Nodegroups
 6. Created Kubernetes Deployments and Services using Python
 
 
@@ -18,8 +18,9 @@
 - [x]  AWS Account.
 - [x]  Programmatic access and AWS configured with CLI.
 - [x]  Python3 .
+- [x]  Python Boto3
 - [x]  Docker and Kubectl installed.
-- [x]  Code editor (Vscode)
+- [x]  Code editor (Vscode).
 
 ## Clallenges & Lessons learned
 
@@ -51,7 +52,7 @@ python3 app.py
 
 This will start the Flask server on **`localhost:5000`**. Navigate to [http://localhost:5000/](http://localhost:5000/) on your browser to access the application.
 
-## **Part 2: Dockerized the Flask application**
+## **Part 2: Dockerizing the Flask application**
 
 ### **Step 1: Created a Dockerfile**
 
@@ -71,11 +72,9 @@ This will start the Flask server in a Docker container on **`localhost:5000`**. 
 
 ## **Part 4: Creating an EKS cluster and deploying the app using Python**
 
-### **Step 1: Create an EKS cluster**
+### **Step 1: Created an EKS cluster**
 
-### **Step 2: Create a node group**
-
-Create a node group in the EKS cluster.
+### **Step 2: Created a node group**
 
 ### **Step 3: Create deployment and service**
 
