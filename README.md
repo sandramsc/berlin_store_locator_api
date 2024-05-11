@@ -22,7 +22,30 @@
 - [x]  Docker and Kubectl installed.
 - [x]  Code editor (Vscode).
 
-## Clallenges & Lessons learned
+## Challenges & Take away
+
+1. (challenge) I chose to create this REST API because a CLI tool I am building needs an API of this structure, but I did not find one in the short time of research I did so I chose to build one. THe most challenging aspect was figuring out how to create nested fields and test the requests so they were all successfull. This took a coiuple of days and at the moment only the test for the PUT request is working as it should.
+1. (take away) Its a great thing that I am enjoying the processes of developing this tool as the challenges did certainly cause moment for pause and reconsideration in the wee hours of 4am when debugging and trying to find a fix for the GET and PATCH requests. It tought me that resiliance and consistency in working on the project is worth the challenge and I learned how to create resources for netsed fields.
+
+2. (challenge) Worked on degugging (over 8hrs) why the REST API wouldn't push to the ECR on AWS.
+
+ <div id="header" align="center">
+  <img src="https://github.com/sandramsc/berlin_store_locator_api/assets/19821445/c5dc4faa-ccb3-4859-ad7e-7f2ddf49d29d" width="1050" />
+</div>
+I had already:
+- added access_id
+- added access_key
+- added region
+- logged in successfully
+- built the image
+- added a tag
+yet the image still wouldn't push. I'd also given the IAM user these permissions:
+- AdministratorAccess
+- AmazonEC2ContainerRegistryFullAccess
+- AWSAppRunnerServicePolicyForECRAccess
+- IAMUserChangePassword
+
+***Most StackOverflow, GitHub related posts suggested to add the above in different ways, none would worked 🥴. Until I tried...
 
 ## **Part 1: Deploying the Flask application locally**
 
