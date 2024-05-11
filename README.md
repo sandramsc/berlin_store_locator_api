@@ -31,7 +31,6 @@
 
 - [x]  (challenge) Since this API had a store field and a products field that were alll nested under the districts field, I needed to figure out a function that would enable users to GET, PUT, PATCH to any one field if they so desired to, this in part was tied to finding a solution to list the resource fields and then calling these in their respective requests. This took a couple of days and at the moment only the test for the PUT request is working as it should.
 - [x]  (take away) Its a great thing that I am enjoying the processes of developing this tool as the challenges did certainly cause moment for pause and reconsideration in the wee hours of 4am when debugging and trying to find a fix for the GET and PATCH requests. It tought me that resiliance and consistency in working on a project project you enjoy is worth the challenge (and to take short breaks between debugging, helps with re-focusing and looking at the bug from different perspctives, which aided with finding a solution) and I learned how to create resources for netsed fields.
-- [x]  Python Boto3
 
 ----------
 - [x]  (challenge) Worked on degugging (over 8hrs) why the REST API wouldn't push to the ECR on AWS.
