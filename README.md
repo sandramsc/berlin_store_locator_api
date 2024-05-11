@@ -13,9 +13,7 @@
 6. Created Kubernetes Deployments and Services using Python
 
 
-## **Tools** !
-
-(Tools & technologies used in this project)
+## **Tools & technologies used in this project**
 
 - [x]  AWS Account.
 - [x]  Programmatic access and AWS configured with CLI.
