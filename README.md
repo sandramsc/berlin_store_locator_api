@@ -1,4 +1,4 @@
-# **Cloud Native Resource REST API in Python on K8s!**
+# **Cloud Native REST API in Python on K8s!**
 
 ## Development Process
 
@@ -10,7 +10,7 @@
     3. Ran Docker Container
 4. Created ECR repository using Python Boto3 and pushing Docker Image to ECR
 5. Used Kubernetes concepts and Created EKS cluster and Nodegroups
-6. Created Kubernetes Deployments and Services using Python!
+6. Created Kubernetes Deployments and Services using Python
 
 
 ## **Tools** !
@@ -22,6 +22,8 @@
 - [x]  Python3 .
 - [x]  Docker and Kubectl installed.
 - [x]  Code editor (Vscode)
+
+## Clallenges & Lessons learned
 
 ## **Part 1: Deploying the Flask application locally**
 
