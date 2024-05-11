@@ -28,12 +28,13 @@
  <div id="header" align="center">
   <img src="https://github.com/sandramsc/berlin_store_locator_api/assets/19821445/521f2564-bb7c-4c7c-8365-0ad758329a8a" width="1050" />
 </div>
+
 - [x]  (challenge) Since this API had a store field and a products field that were alll nested under the districts field, I needed to figure out a function that would enable users to GET, PUT, PATCH to any one field if they so desired to, this in part was tied to finding a solution to list the resource fields and then calling these in their respective requests. This took a couple of days and at the moment only the test for the PUT request is working as it should.
 - [x]  (take away) Its a great thing that I am enjoying the processes of developing this tool as the challenges did certainly cause moment for pause and reconsideration in the wee hours of 4am when debugging and trying to find a fix for the GET and PATCH requests. It tought me that resiliance and consistency in working on a project project you enjoy is worth the challenge (and to take short breaks between debugging, helps with re-focusing and looking at the bug from different perspctives, which aided with finding a solution) and I learned how to create resources for netsed fields.
 - [x]  Python Boto3
 
 ----------
-- (challenge) Worked on degugging (over 8hrs) why the REST API wouldn't push to the ECR on AWS.
+- [x]  (challenge) Worked on degugging (over 8hrs) why the REST API wouldn't push to the ECR on AWS.
 
  <div id="header" align="center">
   <img src="https://github.com/sandramsc/berlin_store_locator_api/assets/19821445/c5dc4faa-ccb3-4859-ad7e-7f2ddf49d29d" width="1050" />
@@ -53,7 +54,7 @@ yet the image still wouldn't push. I'd also given the IAM user these permissions
 
 ***Most StackOverflow, GitHub related posts suggested to add the above in different ways, initially none would work for several hours 🥴.
 
-- (take away) The challenge with ECR pushing underscored the intricacies of AWS IAM permissions and Docker interactions. This experience emphasized the need for careful consideration of AWS configurations and troubleshooting strategies, showcasing the importance of perseverance and resourcefulness in resolving technical hurdles.
+- [x]  (take away) The challenge with ECR pushing underscored the intricacies of AWS IAM permissions and Docker interactions. This experience emphasized the need for careful consideration of AWS configurations and troubleshooting strategies, showcasing the importance of perseverance and resourcefulness in resolving technical hurdles.
 
 ## **Part 1: Deploying the Flask application locally**
 
