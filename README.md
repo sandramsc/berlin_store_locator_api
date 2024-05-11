@@ -39,13 +39,16 @@
   <img src="https://github.com/sandramsc/berlin_store_locator_api/assets/19821445/c5dc4faa-ccb3-4859-ad7e-7f2ddf49d29d" width="1050" />
 </div>
 I had already:
+
 - added access_id
 - added access_key
 - added region
 - logged in successfully
 - built the image
 - added a tag
+  
 yet the image still wouldn't push. I'd also given the IAM user these permissions:
+
 - AdministratorAccess
 - AmazonEC2ContainerRegistryFullAccess
 - AWSAppRunnerServicePolicyForECRAccess
