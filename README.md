@@ -25,7 +25,7 @@
 ## Challenges & Take away
 
 1. (challenge) I chose to create this REST API because a CLI tool I am building needs an API of this structure, but I did not find one in the short time of research I did so I chose to build one. THe most challenging aspect was figuring out how to create nested fields and test the requests so they were all successfull. This took a coiuple of days and at the moment only the test for the PUT request is working as it should.
-1. (take away) Its a great thing that I am enjoying the processes of developing this tool as the challenges did certainly cause moment for pause and reconsideration in the wee hours of 4am when debugging and trying to find a fix for the GET and PATCH requests. It tought me that resiliance and consistency in working on the project is worth the challenge and I learned how to create resources for netsed fields.
+1. (take away) Its a great thing that I am enjoying the processes of developing this tool as the challenges did certainly cause moment for pause and reconsideration in the wee hours of 4am when debugging and trying to find a fix for the GET and PATCH requests. It tought me that resiliance and consistency in working on a project project you enjoy is worth the challenge (and to take short breaks between debugging, helps with re-focusing and looking at the bug from different perspctives, which aided with finding a solution) and I learned how to create resources for netsed fields.
 
 2. (challenge) Worked on degugging (over 8hrs) why the REST API wouldn't push to the ECR on AWS.
 
