@@ -15,12 +15,12 @@
 
 ## **Tools & technologies used in this project**
 
-- [x]  AWS Account.
-- [x]  Programmatic access and AWS configured with CLI.
-- [x]  Python3 .
-- [x]  Python Boto3
+- [x]  AWS: EKS, ECR
+- [x]  Programmatic access and AWS configured with CLI
+- [x]  Python3 
+- [x]  Python Boto3, 
 - [x]  Docker and Kubectl installed.
-- [x]  Code editor (Vscode).
+- [x]  Code editor (Vscode)
 
 ## Challenges & Take away
 
@@ -70,8 +70,6 @@ git clone berlin_store_locator_api
 
 ### **Step 2: Install dependencies**
 
-The application uses **`Flask`, and boto3** libraries. Install them using pip:
-
 ```
 pip3 install -r requirements.txt
 ```
@@ -89,9 +87,6 @@ This will start the Flask server on **`localhost:5000`**. Navigate to [http://lo
 ## **Part 2: Dockerizing the Flask application**
 
 ### **Step 1: Created a Dockerfile**
-
-Create a **`Dockerfile`** in the root directory of the project with the following contents:
-
 ### **Step 2: Built the Docker image**
 
 ### **Step 3: Ran the Docker container**
@@ -104,7 +99,7 @@ This will start the Flask server in a Docker container on **`localhost:5000`**. 
 
 ### **Step 2: Push the Docker image to ECR**
 
-## **Part 4: Creating an EKS cluster and deploying the app using Python**
+## **Part 4: Created an EKS cluster and deploying the app using Python**
 
 ### **Step 1: Created an EKS cluster**
 
