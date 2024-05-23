@@ -1,824 +1,2126 @@
 {
-  "districts": [
-    {
-      "district_id": "d1",
-      "dist_name": "Wilmersdorf",
-      "stores": [
+    "districts": [
         {
-          "store_id": "s1",
-          "store_name": "REWE",
-          "address": "123 Wilmersdorf Street, Berlin",
-          "products": [
-            { "item": "Organic Apples", "price": 1.99 },
-            { "item": "Oranges", "price": 2.49 },
-            { "item": "Bananas", "price": 1.29 },
-            { "item": "Milk", "price": 0.99 },
-            { "item": "Eggs", "price": 1.79 },
-            { "item": "Yogurt", "price": 1.49 },
-            { "item": "Bread", "price": 2.29 },
-            { "item": "Cheese", "price": 2.99 },
-            { "item": "Chicken", "price": 4.99 },
-            { "item": "Beef", "price": 8.99 },
-            { "item": "Fish", "price": 6.49 },
-            { "item": "Rice", "price": 1.99 },
-            { "item": "Pasta", "price": 1.49 },
-            { "item": "Tomatoes", "price": 0.79 },
-            { "item": "Potatoes", "price": 0.69 },
-            { "item": "Onions", "price": 0.49 },
-            { "item": "Spinach", "price": 1.29 },
-            { "item": "Carrots", "price": 0.99 },
-            { "item": "Applesauce", "price": 1.29 },
-            { "item": "Cereal", "price": 2.99 }
-          ]
+            "district_id": "d2",
+            "dist_name": "Charlottenburg",
+            "stores": [
+                {
+                    "store_id": "s1",
+                    "store_name": "ALDI Nord",
+                    "address": "789 Charlottenburg Street, Berlin",
+                    "products": [
+                        {
+                            "item": "Canned Vegetables",
+                            "price": 0.89
+                        },
+                        {
+                            "item": "Peanut Butter",
+                            "price": 1.99
+                        },
+                        {
+                            "item": "Jelly",
+                            "price": 1.49
+                        },
+                        {
+                            "item": "Bread",
+                            "price": 1.29
+                        },
+                        {
+                            "item": "Milk",
+                            "price": 0.99
+                        },
+                        {
+                            "item": "Eggs",
+                            "price": 1.79
+                        },
+                        {
+                            "item": "Butter",
+                            "price": 1.49
+                        },
+                        {
+                            "item": "Yogurt",
+                            "price": 0.79
+                        },
+                        {
+                            "item": "Cheese",
+                            "price": 2.99
+                        },
+                        {
+                            "item": "Chicken",
+                            "price": 3.99
+                        },
+                        {
+                            "item": "Beef",
+                            "price": 7.99
+                        },
+                        {
+                            "item": "Pork",
+                            "price": 5.99
+                        },
+                        {
+                            "item": "Fish",
+                            "price": 6.49
+                        },
+                        {
+                            "item": "Rice",
+                            "price": 1.99
+                        },
+                        {
+                            "item": "Pasta",
+                            "price": 1.49
+                        },
+                        {
+                            "item": "Tomatoes",
+                            "price": 0.79
+                        },
+                        {
+                            "item": "Potatoes",
+                            "price": 0.69
+                        },
+                        {
+                            "item": "Onions",
+                            "price": 0.49
+                        },
+                        {
+                            "item": "Spinach",
+                            "price": 1.29
+                        },
+                        {
+                            "item": "Carrots",
+                            "price": 0.99
+                        },
+                        {
+                            "item": "Applesauce",
+                            "price": 1.29
+                        }
+                    ]
+                },
+                {
+                    "store_id": "s2",
+                    "store_name": "Kaufland",
+                    "address": "1011 Charlottenburg Street, Berlin",
+                    "products": [
+                        {
+                            "item": "Cereal",
+                            "price": 2.99
+                        },
+                        {
+                            "item": "Cookies",
+                            "price": 1.79
+                        },
+                        {
+                            "item": "Crackers",
+                            "price": 1.29
+                        },
+                        {
+                            "item": "Chips",
+                            "price": 1.49
+                        },
+                        {
+                            "item": "Chocolate",
+                            "price": 1.99
+                        },
+                        {
+                            "item": "Candy",
+                            "price": 0.99
+                        },
+                        {
+                            "item": "Soda",
+                            "price": 0.79
+                        },
+                        {
+                            "item": "Juice",
+                            "price": 1.69
+                        },
+                        {
+                            "item": "Energy Drinks",
+                            "price": 1.99
+                        },
+                        {
+                            "item": "Beer",
+                            "price": 0.89
+                        },
+                        {
+                            "item": "Wine",
+                            "price": 5.99
+                        },
+                        {
+                            "item": "Vodka",
+                            "price": 9.99
+                        },
+                        {
+                            "item": "Whiskey",
+                            "price": 12.99
+                        },
+                        {
+                            "item": "Rum",
+                            "price": 8.49
+                        },
+                        {
+                            "item": "Tequila",
+                            "price": 7.99
+                        },
+                        {
+                            "item": "Gin",
+                            "price": 11.49
+                        },
+                        {
+                            "item": "Lemonade",
+                            "price": 1.29
+                        },
+                        {
+                            "item": "Water",
+                            "price": 0.39
+                        },
+                        {
+                            "item": "Coffee",
+                            "price": 3.49
+                        },
+                        {
+                            "item": "Tea",
+                            "price": 2.49
+                        }
+                    ]
+                },
+                {
+                    "store_id": "s3",
+                    "store_name": "Penny Markt",
+                    "address": "1213 Charlottenburg Street, Berlin",
+                    "products": [
+                        {
+                            "item": "Bread",
+                            "price": 1.19
+                        },
+                        {
+                            "item": "Milk",
+                            "price": 0.89
+                        },
+                        {
+                            "item": "Eggs",
+                            "price": 1.69
+                        },
+                        {
+                            "item": "Butter",
+                            "price": 1.39
+                        },
+                        {
+                            "item": "Yogurt",
+                            "price": 0.69
+                        },
+                        {
+                            "item": "Cheese",
+                            "price": 2.49
+                        },
+                        {
+                            "item": "Chicken",
+                            "price": 3.49
+                        },
+                        {
+                            "item": "Beef",
+                            "price": 6.99
+                        },
+                        {
+                            "item": "Pork",
+                            "price": 5.49
+                        },
+                        {
+                            "item": "Fish",
+                            "price": 6.99
+                        },
+                        {
+                            "item": "Rice",
+                            "price": 1.69
+                        },
+                        {
+                            "item": "Pasta",
+                            "price": 1.29
+                        },
+                        {
+                            "item": "Tomatoes",
+                            "price": 0.99
+                        },
+                        {
+                            "item": "Potatoes",
+                            "price": 0.79
+                        },
+                        {
+                            "item": "Onions",
+                            "price": 0.69
+                        },
+                        {
+                            "item": "Spinach",
+                            "price": 1.19
+                        },
+                        {
+                            "item": "Carrots",
+                            "price": 0.79
+                        },
+                        {
+                            "item": "Applesauce",
+                            "price": 1.19
+                        },
+                        {
+                            "item": "Cereal",
+                            "price": 2.49
+                        },
+                        {
+                            "item": "Cookies",
+                            "price": 1.29
+                        }
+                    ]
+                },
+                {
+                    "store_id": "s4",
+                    "store_name": "PENNY",
+                    "address": "1415 Charlottenburg Street, Berlin",
+                    "products": [
+                        {
+                            "item": "Bread",
+                            "price": 1.29
+                        },
+                        {
+                            "item": "Milk",
+                            "price": 0.99
+                        },
+                        {
+                            "item": "Eggs",
+                            "price": 1.89
+                        },
+                        {
+                            "item": "Butter",
+                            "price": 1.49
+                        },
+                        {
+                            "item": "Yogurt",
+                            "price": 0.79
+                        },
+                        {
+                            "item": "Cheese",
+                            "price": 2.69
+                        },
+                        {
+                            "item": "Chicken",
+                            "price": 3.79
+                        },
+                        {
+                            "item": "Beef",
+                            "price": 7.49
+                        },
+                        {
+                            "item": "Pork",
+                            "price": 5.99
+                        },
+                        {
+                            "item": "Fish",
+                            "price": 7.49
+                        },
+                        {
+                            "item": "Rice",
+                            "price": 1.99
+                        },
+                        {
+                            "item": "Pasta",
+                            "price": 1.49
+                        },
+                        {
+                            "item": "Tomatoes",
+                            "price": 0.89
+                        },
+                        {
+                            "item": "Potatoes",
+                            "price": 0.69
+                        },
+                        {
+                            "item": "Onions",
+                            "price": 0.59
+                        },
+                        {
+                            "item": "Spinach",
+                            "price": 1.39
+                        },
+                        {
+                            "item": "Carrots",
+                            "price": 0.89
+                        },
+                        {
+                            "item": "Applesauce",
+                            "price": 1.39
+                        },
+                        {
+                            "item": "Cereal",
+                            "price": 2.79
+                        },
+                        {
+                            "item": "Cookies",
+                            "price": 1.39
+                        }
+                    ]
+                }
+            ]
         },
         {
-          "store_id": "s2",
-          "store_name": "ALDI Süd",
-          "address": "456 Wilmersdorf Street, Berlin",
-          "products": [
-            { "item": "Canned Beans", "price": 0.99 },
-            { "item": "Pasta Sauce", "price": 1.99 },
-            { "item": "Crackers", "price": 1.29 },
-            { "item": "Ham", "price": 2.99 },
-            { "item": "Salami", "price": 3.49 },
-            { "item": "Sausages", "price": 4.49 },
-            { "item": "Frozen Pizza", "price": 2.79 },
-            { "item": "Ice Cream", "price": 3.99 },
-            { "item": "Chocolate", "price": 1.79 },
-            { "item": "Chips", "price": 1.49 },
-            { "item": "Soda", "price": 0.99 },
-            { "item": "Juice", "price": 1.69 },
-            { "item": "Beer", "price": 0.79 },
-            { "item": "Wine", "price": 5.99 },
-            { "item": "Vodka", "price": 9.99 },
-            { "item": "Whiskey", "price": 12.99 },
-            { "item": "Rum", "price": 8.49 },
-            { "item": "Tequila", "price": 7.99 },
-            { "item": "Gin", "price": 11.49 },
-            { "item": "Lemonade", "price": 1.29 }
-          ]
+            "district_id": "d3",
+            "dist_name": "Friedrichshain",
+            "stores": [
+                {
+                    "store_id": "s1",
+                    "store_name": "REWE",
+                    "address": "123 Friedrichshain Street, Berlin",
+                    "products": [
+                        {
+                            "item": "Organic Apples",
+                            "price": 1.99
+                        },
+                        {
+                            "item": "Oranges",
+                            "price": 2.49
+                        },
+                        {
+                            "item": "Bananas",
+                            "price": 1.29
+                        },
+                        {
+                            "item": "Milk",
+                            "price": 0.99
+                        },
+                        {
+                            "item": "Eggs",
+                            "price": 1.79
+                        },
+                        {
+                            "item": "Yogurt",
+                            "price": 1.49
+                        },
+                        {
+                            "item": "Bread",
+                            "price": 2.29
+                        },
+                        {
+                            "item": "Cheese",
+                            "price": 2.99
+                        },
+                        {
+                            "item": "Chicken",
+                            "price": 4.99
+                        },
+                        {
+                            "item": "Beef",
+                            "price": 8.99
+                        },
+                        {
+                            "item": "Fish",
+                            "price": 6.49
+                        },
+                        {
+                            "item": "Rice",
+                            "price": 1.99
+                        },
+                        {
+                            "item": "Pasta",
+                            "price": 1.49
+                        },
+                        {
+                            "item": "Tomatoes",
+                            "price": 0.79
+                        },
+                        {
+                            "item": "Potatoes",
+                            "price": 0.69
+                        },
+                        {
+                            "item": "Onions",
+                            "price": 0.49
+                        },
+                        {
+                            "item": "Spinach",
+                            "price": 1.29
+                        },
+                        {
+                            "item": "Carrots",
+                            "price": 0.99
+                        },
+                        {
+                            "item": "Applesauce",
+                            "price": 1.29
+                        },
+                        {
+                            "item": "Cereal",
+                            "price": 2.99
+                        }
+                    ]
+                },
+                {
+                    "store_id": "s2",
+                    "store_name": "ALDI S\u00fcd",
+                    "address": "456 Friedrichshain Street, Berlin",
+                    "products": [
+                        {
+                            "item": "Canned Beans",
+                            "price": 0.99
+                        },
+                        {
+                            "item": "Pasta Sauce",
+                            "price": 1.99
+                        },
+                        {
+                            "item": "Crackers",
+                            "price": 1.29
+                        },
+                        {
+                            "item": "Ham",
+                            "price": 2.99
+                        },
+                        {
+                            "item": "Salami",
+                            "price": 3.49
+                        },
+                        {
+                            "item": "Sausages",
+                            "price": 4.49
+                        },
+                        {
+                            "item": "Frozen Pizza",
+                            "price": 2.79
+                        },
+                        {
+                            "item": "Ice Cream",
+                            "price": 3.99
+                        },
+                        {
+                            "item": "Chocolate",
+                            "price": 1.79
+                        },
+                        {
+                            "item": "Chips",
+                            "price": 1.49
+                        },
+                        {
+                            "item": "Soda",
+                            "price": 0.99
+                        },
+                        {
+                            "item": "Juice",
+                            "price": 1.69
+                        },
+                        {
+                            "item": "Beer",
+                            "price": 0.79
+                        },
+                        {
+                            "item": "Wine",
+                            "price": 5.99
+                        },
+                        {
+                            "item": "Vodka",
+                            "price": 9.99
+                        },
+                        {
+                            "item": "Whiskey",
+                            "price": 12.99
+                        },
+                        {
+                            "item": "Rum",
+                            "price": 8.49
+                        },
+                        {
+                            "item": "Tequila",
+                            "price": 7.99
+                        },
+                        {
+                            "item": "Gin",
+                            "price": 11.49
+                        },
+                        {
+                            "item": "Lemonade",
+                            "price": 1.29
+                        }
+                    ]
+                },
+                {
+                    "store_id": "s3",
+                    "store_name": "EDEKA",
+                    "address": "789 Friedrichshain Street, Berlin",
+                    "products": [
+                        {
+                            "item": "Canned Corn",
+                            "price": 0.79
+                        },
+                        {
+                            "item": "Soy Milk",
+                            "price": 1.99
+                        },
+                        {
+                            "item": "Tofu",
+                            "price": 1.49
+                        },
+                        {
+                            "item": "Granola",
+                            "price": 3.49
+                        },
+                        {
+                            "item": "Almonds",
+                            "price": 2.99
+                        },
+                        {
+                            "item": "Quinoa",
+                            "price": 4.99
+                        },
+                        {
+                            "item": "Coconut Oil",
+                            "price": 5.99
+                        },
+                        {
+                            "item": "Honey",
+                            "price": 3.29
+                        },
+                        {
+                            "item": "Olive Oil",
+                            "price": 6.99
+                        },
+                        {
+                            "item": "Apple Cider Vinegar",
+                            "price": 1.99
+                        },
+                        {
+                            "item": "Maple Syrup",
+                            "price": 7.49
+                        },
+                        {
+                            "item": "Dark Chocolate",
+                            "price": 2.49
+                        },
+                        {
+                            "item": "Green Tea",
+                            "price": 1.29
+                        },
+                        {
+                            "item": "Red Wine Vinegar",
+                            "price": 2.99
+                        },
+                        {
+                            "item": "Dried Cranberries",
+                            "price": 4.29
+                        },
+                        {
+                            "item": "Sunflower Seeds",
+                            "price": 1.79
+                        },
+                        {
+                            "item": "Chia Seeds",
+                            "price": 3.99
+                        },
+                        {
+                            "item": "Flaxseed",
+                            "price": 2.49
+                        },
+                        {
+                            "item": "Peanut Butter",
+                            "price": 3.99
+                        },
+                        {
+                            "item": "Jam",
+                            "price": 2.79
+                        }
+                    ]
+                },
+                {
+                    "store_id": "s4",
+                    "store_name": "Netto",
+                    "address": "1011 Friedrichshain Street, Berlin",
+                    "products": [
+                        {
+                            "item": "Canned Soup",
+                            "price": 0.69
+                        },
+                        {
+                            "item": "Instant Noodles",
+                            "price": 0.49
+                        },
+                        {
+                            "item": "Ramen",
+                            "price": 0.39
+                        },
+                        {
+                            "item": "Cereal Bars",
+                            "price": 1.29
+                        },
+                        {
+                            "item": "Popcorn",
+                            "price": 0.99
+                        },
+                        {
+                            "item": "Energy Bars",
+                            "price": 1.79
+                        },
+                        {
+                            "item": "Energy Drinks",
+                            "price": 1.99
+                        },
+                        {
+                            "item": "Bottled Water",
+                            "price": 0.29
+                        },
+                        {
+                            "item": "Coffee",
+                            "price": 3.49
+                        },
+                        {
+                            "item": "Tea Bags",
+                            "price": 1.99
+                        },
+                        {
+                            "item": "Canned Tuna",
+                            "price": 1.49
+                        },
+                        {
+                            "item": "Peanuts",
+                            "price": 2.99
+                        },
+                        {
+                            "item": "Dried Fruits",
+                            "price": 2.49
+                        },
+                        {
+                            "item": "Popcorn",
+                            "price": 1.79
+                        },
+                        {
+                            "item": "Sour Gummy Worms",
+                            "price": 0.99
+                        },
+                        {
+                            "item": "Chocolate Bars",
+                            "price": 1.49
+                        },
+                        {
+                            "item": "Potato Chips",
+                            "price": 1.29
+                        },
+                        {
+                            "item": "Pretzels",
+                            "price": 0.79
+                        },
+                        {
+                            "item": "Crackers",
+                            "price": 0.89
+                        },
+                        {
+                            "item": "Bread Rolls",
+                            "price": 0.99
+                        }
+                    ]
+                },
+                {
+                    "store_id": "s5",
+                    "store_name": "real",
+                    "address": "1213 Friedrichshain Street, Berlin",
+                    "products": [
+                        {
+                            "item": "Baby Food",
+                            "price": 0.99
+                        },
+                        {
+                            "item": "Diapers",
+                            "price": 4.99
+                        },
+                        {
+                            "item": "Wet Wipes",
+                            "price": 1.49
+                        },
+                        {
+                            "item": "Baby Shampoo",
+                            "price": 2.99
+                        },
+                        {
+                            "item": "Baby Lotion",
+                            "price": 3.49
+                        },
+                        {
+                            "item": "Baby Powder",
+                            "price": 1.79
+                        },
+                        {
+                            "item": "Baby Oil",
+                            "price": 2.29
+                        },
+                        {
+                            "item": "Baby Bath",
+                            "price": 3.99
+                        },
+                        {
+                            "item": "Baby Clothes",
+                            "price": 5.99
+                        },
+                        {
+                            "item": "Baby Toys",
+                            "price": 4.49
+                        },
+                        {
+                            "item": "Baby Books",
+                            "price": 6.99
+                        },
+                        {
+                            "item": "Baby Monitors",
+                            "price": 29.99
+                        },
+                        {
+                            "item": "Baby Car Seats",
+                            "price": 49.99
+                        },
+                        {
+                            "item": "Baby Strollers",
+                            "price": 79.99
+                        },
+                        {
+                            "item": "Baby Cribs",
+                            "price": 99.99
+                        },
+                        {
+                            "item": "Baby High Chairs",
+                            "price": 39.99
+                        },
+                        {
+                            "item": "Baby Play Mats",
+                            "price": 19.99
+                        },
+                        {
+                            "item": "Baby Bottles",
+                            "price": 2.99
+                        },
+                        {
+                            "item": "Baby Pacifiers",
+                            "price": 1.49
+                        },
+                        {
+                            "item": "Baby Teethers",
+                            "price": 0.99
+                        }
+                    ]
+                }
+            ]
         },
         {
-          "store_id": "s3",
-          "store_name": "EDEKA",
-          "address": "789 Wilmersdorf Street, Berlin",
-          "products": [
-            { "item": "Canned Corn", "price": 0.79 },
-            { "item": "Soy Milk", "price": 1.99 },
-            { "item": "Tofu", "price": 1.49 },
-            { "item": "Granola", "price": 3.49 },
-            { "item": "Almonds", "price": 2.99 },
-            { "item": "Quinoa", "price": 4.99 },
-            { "item": "Coconut Oil", "price": 5.99 },
-            { "item": "Honey", "price": 3.29 },
-            { "item": "Olive Oil", "price": 6.99 },
-            { "item": "Apple Cider Vinegar", "price": 1.99 },
-            { "item": "Maple Syrup", "price": 7.49 },
-            { "item": "Dark Chocolate", "price": 2.49 },
-            { "item": "Green Tea", "price": 1.29 },
-            { "item": "Red Wine Vinegar", "price": 2.99 },
-            { "item": "Dried Cranberries", "price": 4.29 },
-            { "item": "Sunflower Seeds", "price": 1.79 },
-            { "item": "Chia Seeds", "price": 3.99 },
-            { "item": "Flaxseed", "price": 2.49 },
-            { "item": "Peanut Butter", "price": 3.99 },
-            { "item": "Jam", "price": 2.79 }
-          ]
+            "district_id": "d4",
+            "dist_name": "Kreuzberg",
+            "stores": [
+                {
+                    "store_id": "s1",
+                    "store_name": "REWE",
+                    "address": "123 Kreuzberg Street, Berlin",
+                    "products": [
+                        {
+                            "item": "Organic Apples",
+                            "price": 1.99
+                        },
+                        {
+                            "item": "Oranges",
+                            "price": 2.49
+                        },
+                        {
+                            "item": "Bananas",
+                            "price": 1.29
+                        },
+                        {
+                            "item": "Milk",
+                            "price": 0.99
+                        },
+                        {
+                            "item": "Eggs",
+                            "price": 1.79
+                        },
+                        {
+                            "item": "Yogurt",
+                            "price": 1.49
+                        },
+                        {
+                            "item": "Bread",
+                            "price": 2.29
+                        },
+                        {
+                            "item": "Cheese",
+                            "price": 2.99
+                        },
+                        {
+                            "item": "Chicken",
+                            "price": 4.99
+                        },
+                        {
+                            "item": "Beef",
+                            "price": 8.99
+                        },
+                        {
+                            "item": "Fish",
+                            "price": 6.49
+                        },
+                        {
+                            "item": "Rice",
+                            "price": 1.99
+                        },
+                        {
+                            "item": "Pasta",
+                            "price": 1.49
+                        },
+                        {
+                            "item": "Tomatoes",
+                            "price": 0.79
+                        },
+                        {
+                            "item": "Potatoes",
+                            "price": 0.69
+                        },
+                        {
+                            "item": "Onions",
+                            "price": 0.49
+                        },
+                        {
+                            "item": "Spinach",
+                            "price": 1.29
+                        },
+                        {
+                            "item": "Carrots",
+                            "price": 0.99
+                        },
+                        {
+                            "item": "Applesauce",
+                            "price": 1.29
+                        },
+                        {
+                            "item": "Cereal",
+                            "price": 2.99
+                        }
+                    ]
+                },
+                {
+                    "store_id": "s2",
+                    "store_name": "ALDI S\u00fcd",
+                    "address": "456 Kreuzberg Street, Berlin",
+                    "products": [
+                        {
+                            "item": "Canned Beans",
+                            "price": 0.99
+                        },
+                        {
+                            "item": "Pasta Sauce",
+                            "price": 1.99
+                        },
+                        {
+                            "item": "Crackers",
+                            "price": 1.29
+                        },
+                        {
+                            "item": "Ham",
+                            "price": 2.99
+                        },
+                        {
+                            "item": "Salami",
+                            "price": 3.49
+                        },
+                        {
+                            "item": "Sausages",
+                            "price": 4.49
+                        },
+                        {
+                            "item": "Frozen Pizza",
+                            "price": 2.79
+                        },
+                        {
+                            "item": "Ice Cream",
+                            "price": 3.99
+                        },
+                        {
+                            "item": "Chocolate",
+                            "price": 1.79
+                        },
+                        {
+                            "item": "Chips",
+                            "price": 1.49
+                        },
+                        {
+                            "item": "Soda",
+                            "price": 0.99
+                        },
+                        {
+                            "item": "Juice",
+                            "price": 1.69
+                        },
+                        {
+                            "item": "Beer",
+                            "price": 0.79
+                        },
+                        {
+                            "item": "Wine",
+                            "price": 5.99
+                        },
+                        {
+                            "item": "Vodka",
+                            "price": 9.99
+                        },
+                        {
+                            "item": "Whiskey",
+                            "price": 12.99
+                        },
+                        {
+                            "item": "Rum",
+                            "price": 8.49
+                        },
+                        {
+                            "item": "Tequila",
+                            "price": 7.99
+                        },
+                        {
+                            "item": "Gin",
+                            "price": 11.49
+                        },
+                        {
+                            "item": "Lemonade",
+                            "price": 1.29
+                        }
+                    ]
+                },
+                {
+                    "store_id": "s3",
+                    "store_name": "EDEKA",
+                    "address": "789 Kreuzberg Street, Berlin",
+                    "products": [
+                        {
+                            "item": "Canned Corn",
+                            "price": 0.79
+                        },
+                        {
+                            "item": "Soy Milk",
+                            "price": 1.99
+                        },
+                        {
+                            "item": "Tofu",
+                            "price": 1.49
+                        },
+                        {
+                            "item": "Granola",
+                            "price": 3.49
+                        },
+                        {
+                            "item": "Almonds",
+                            "price": 2.99
+                        },
+                        {
+                            "item": "Quinoa",
+                            "price": 4.99
+                        },
+                        {
+                            "item": "Coconut Oil",
+                            "price": 5.99
+                        },
+                        {
+                            "item": "Honey",
+                            "price": 3.29
+                        },
+                        {
+                            "item": "Olive Oil",
+                            "price": 6.99
+                        },
+                        {
+                            "item": "Apple Cider Vinegar",
+                            "price": 1.99
+                        },
+                        {
+                            "item": "Maple Syrup",
+                            "price": 7.49
+                        },
+                        {
+                            "item": "Dark Chocolate",
+                            "price": 2.49
+                        },
+                        {
+                            "item": "Green Tea",
+                            "price": 1.29
+                        },
+                        {
+                            "item": "Red Wine Vinegar",
+                            "price": 2.99
+                        },
+                        {
+                            "item": "Dried Cranberries",
+                            "price": 4.29
+                        },
+                        {
+                            "item": "Sunflower Seeds",
+                            "price": 1.79
+                        },
+                        {
+                            "item": "Chia Seeds",
+                            "price": 3.99
+                        },
+                        {
+                            "item": "Flaxseed",
+                            "price": 2.49
+                        },
+                        {
+                            "item": "Peanut Butter",
+                            "price": 3.99
+                        },
+                        {
+                            "item": "Jam",
+                            "price": 2.79
+                        }
+                    ]
+                },
+                {
+                    "store_id": "s4",
+                    "store_name": "Netto",
+                    "address": "1011 Kreuzberg Street, Berlin",
+                    "products": [
+                        {
+                            "item": "Canned Soup",
+                            "price": 0.69
+                        },
+                        {
+                            "item": "Instant Noodles",
+                            "price": 0.49
+                        },
+                        {
+                            "item": "Ramen",
+                            "price": 0.39
+                        },
+                        {
+                            "item": "Cereal Bars",
+                            "price": 1.29
+                        },
+                        {
+                            "item": "Popcorn",
+                            "price": 0.99
+                        },
+                        {
+                            "item": "Energy Bars",
+                            "price": 1.79
+                        },
+                        {
+                            "item": "Energy Drinks",
+                            "price": 1.99
+                        },
+                        {
+                            "item": "Bottled Water",
+                            "price": 0.29
+                        },
+                        {
+                            "item": "Coffee",
+                            "price": 3.49
+                        },
+                        {
+                            "item": "Tea Bags",
+                            "price": 1.99
+                        },
+                        {
+                            "item": "Canned Tuna",
+                            "price": 1.49
+                        },
+                        {
+                            "item": "Peanuts",
+                            "price": 2.99
+                        },
+                        {
+                            "item": "Dried Fruits",
+                            "price": 2.49
+                        },
+                        {
+                            "item": "Popcorn",
+                            "price": 1.79
+                        },
+                        {
+                            "item": "Sour Gummy Worms",
+                            "price": 0.99
+                        },
+                        {
+                            "item": "Chocolate Bars",
+                            "price": 1.49
+                        },
+                        {
+                            "item": "Potato Chips",
+                            "price": 1.29
+                        },
+                        {
+                            "item": "Pretzels",
+                            "price": 0.79
+                        },
+                        {
+                            "item": "Crackers",
+                            "price": 0.89
+                        },
+                        {
+                            "item": "Bread Rolls",
+                            "price": 0.99
+                        }
+                    ]
+                },
+                {
+                    "store_id": "s5",
+                    "store_name": "real",
+                    "address": "1213 Kreuzberg Street, Berlin",
+                    "products": [
+                        {
+                            "item": "Baby Food",
+                            "price": 0.99
+                        },
+                        {
+                            "item": "Diapers",
+                            "price": 4.99
+                        },
+                        {
+                            "item": "Wet Wipes",
+                            "price": 1.49
+                        },
+                        {
+                            "item": "Baby Shampoo",
+                            "price": 2.99
+                        },
+                        {
+                            "item": "Baby Lotion",
+                            "price": 3.49
+                        },
+                        {
+                            "item": "Baby Powder",
+                            "price": 1.79
+                        },
+                        {
+                            "item": "Baby Oil",
+                            "price": 2.29
+                        },
+                        {
+                            "item": "Baby Bath",
+                            "price": 3.99
+                        },
+                        {
+                            "item": "Baby Clothes",
+                            "price": 5.99
+                        },
+                        {
+                            "item": "Baby Toys",
+                            "price": 4.49
+                        },
+                        {
+                            "item": "Baby Books",
+                            "price": 6.99
+                        },
+                        {
+                            "item": "Baby Monitors",
+                            "price": 29.99
+                        },
+                        {
+                            "item": "Baby Car Seats",
+                            "price": 49.99
+                        },
+                        {
+                            "item": "Baby Strollers",
+                            "price": 79.99
+                        },
+                        {
+                            "item": "Baby Cribs",
+                            "price": 99.99
+                        },
+                        {
+                            "item": "Baby High Chairs",
+                            "price": 39.99
+                        },
+                        {
+                            "item": "Baby Play Mats",
+                            "price": 19.99
+                        },
+                        {
+                            "item": "Baby Bottles",
+                            "price": 2.99
+                        },
+                        {
+                            "item": "Baby Pacifiers",
+                            "price": 1.49
+                        },
+                        {
+                            "item": "Baby Teethers",
+                            "price": 0.99
+                        }
+                    ]
+                }
+            ]
         },
         {
-          "store_id": "s4",
-          "store_name": "Netto",
-          "address": "1011 Wilmersdorf Street, Berlin",
-          "products": [
-            { "item": "Canned Soup", "price": 0.69 },
-            { "item": "Instant Noodles", "price": 0.49 },
-            { "item": "Ramen", "price": 0.39 },
-            { "item": "Cereal Bars", "price": 1.29 },
-            { "item": "Popcorn", "price": 0.99 },
-            { "item": "Energy Bars", "price": 1.79 },
-            { "item": "Energy Drinks", "price": 1.99 },
-            { "item": "Bottled Water", "price": 0.29 },
-            { "item": "Coffee", "price": 3.49 },
-            { "item": "Tea Bags", "price": 1.99 },
-            { "item": "Canned Tuna", "price": 1.49 },
-            { "item": "Peanuts", "price": 2.99 },
-            { "item": "Dried Fruits", "price": 2.49 },
-            { "item": "Popcorn", "price": 1.79 },
-            { "item": "Sour Gummy Worms", "price": 0.99 },
-            { "item": "Chocolate Bars", "price": 1.49 },
-            { "item": "Potato Chips", "price": 1.29 },
-            { "item": "Pretzels", "price": 0.79 },
-            { "item": "Crackers", "price": 0.89 },
-            { "item": "Bread Rolls", "price": 0.99 }
-          ]
+            "district_id": "d5",
+            "dist_name": "Mitte",
+            "stores": [
+                {
+                    "store_id": "s1",
+                    "store_name": "REWE",
+                    "address": "123 Mitte Street, Berlin",
+                    "products": [
+                        {
+                            "item": "Organic Apples",
+                            "price": 1.99
+                        },
+                        {
+                            "item": "Oranges",
+                            "price": 2.49
+                        },
+                        {
+                            "item": "Bananas",
+                            "price": 1.29
+                        },
+                        {
+                            "item": "Milk",
+                            "price": 0.99
+                        },
+                        {
+                            "item": "Eggs",
+                            "price": 1.79
+                        },
+                        {
+                            "item": "Yogurt",
+                            "price": 1.49
+                        },
+                        {
+                            "item": "Bread",
+                            "price": 2.29
+                        },
+                        {
+                            "item": "Cheese",
+                            "price": 2.99
+                        },
+                        {
+                            "item": "Chicken",
+                            "price": 4.99
+                        },
+                        {
+                            "item": "Beef",
+                            "price": 8.99
+                        },
+                        {
+                            "item": "Fish",
+                            "price": 6.49
+                        },
+                        {
+                            "item": "Rice",
+                            "price": 1.99
+                        },
+                        {
+                            "item": "Pasta",
+                            "price": 1.49
+                        },
+                        {
+                            "item": "Tomatoes",
+                            "price": 0.79
+                        },
+                        {
+                            "item": "Potatoes",
+                            "price": 0.69
+                        },
+                        {
+                            "item": "Onions",
+                            "price": 0.49
+                        },
+                        {
+                            "item": "Spinach",
+                            "price": 1.29
+                        },
+                        {
+                            "item": "Carrots",
+                            "price": 0.99
+                        },
+                        {
+                            "item": "Applesauce",
+                            "price": 1.29
+                        },
+                        {
+                            "item": "Cereal",
+                            "price": 2.99
+                        }
+                    ]
+                },
+                {
+                    "store_id": "s2",
+                    "store_name": "ALDI Nord",
+                    "address": "456 Mitte Street, Berlin",
+                    "products": [
+                        {
+                            "item": "Canned Beans",
+                            "price": 0.99
+                        },
+                        {
+                            "item": "Pasta Sauce",
+                            "price": 1.99
+                        },
+                        {
+                            "item": "Crackers",
+                            "price": 1.29
+                        },
+                        {
+                            "item": "Ham",
+                            "price": 2.99
+                        },
+                        {
+                            "item": "Salami",
+                            "price": 3.49
+                        },
+                        {
+                            "item": "Sausages",
+                            "price": 4.49
+                        },
+                        {
+                            "item": "Frozen Pizza",
+                            "price": 2.79
+                        },
+                        {
+                            "item": "Ice Cream",
+                            "price": 3.99
+                        },
+                        {
+                            "item": "Chocolate",
+                            "price": 1.79
+                        },
+                        {
+                            "item": "Chips",
+                            "price": 1.49
+                        },
+                        {
+                            "item": "Soda",
+                            "price": 0.99
+                        },
+                        {
+                            "item": "Juice",
+                            "price": 1.69
+                        },
+                        {
+                            "item": "Beer",
+                            "price": 0.79
+                        },
+                        {
+                            "item": "Wine",
+                            "price": 5.99
+                        },
+                        {
+                            "item": "Vodka",
+                            "price": 9.99
+                        },
+                        {
+                            "item": "Whiskey",
+                            "price": 12.99
+                        },
+                        {
+                            "item": "Rum",
+                            "price": 8.49
+                        },
+                        {
+                            "item": "Tequila",
+                            "price": 7.99
+                        },
+                        {
+                            "item": "Gin",
+                            "price": 11.49
+                        },
+                        {
+                            "item": "Lemonade",
+                            "price": 1.29
+                        }
+                    ]
+                },
+                {
+                    "store_id": "s3",
+                    "store_name": "EDEKA",
+                    "address": "789 Mitte Street, Berlin",
+                    "products": [
+                        {
+                            "item": "Canned Corn",
+                            "price": 0.79
+                        },
+                        {
+                            "item": "Soy Milk",
+                            "price": 1.99
+                        },
+                        {
+                            "item": "Tofu",
+                            "price": 1.49
+                        },
+                        {
+                            "item": "Granola",
+                            "price": 3.49
+                        },
+                        {
+                            "item": "Almonds",
+                            "price": 2.99
+                        },
+                        {
+                            "item": "Quinoa",
+                            "price": 4.99
+                        },
+                        {
+                            "item": "Coconut Oil",
+                            "price": 5.99
+                        },
+                        {
+                            "item": "Honey",
+                            "price": 3.29
+                        },
+                        {
+                            "item": "Olive Oil",
+                            "price": 6.99
+                        },
+                        {
+                            "item": "Apple Cider Vinegar",
+                            "price": 1.99
+                        },
+                        {
+                            "item": "Maple Syrup",
+                            "price": 7.49
+                        },
+                        {
+                            "item": "Dark Chocolate",
+                            "price": 2.49
+                        },
+                        {
+                            "item": "Green Tea",
+                            "price": 1.29
+                        },
+                        {
+                            "item": "Red Wine Vinegar",
+                            "price": 2.99
+                        },
+                        {
+                            "item": "Dried Cranberries",
+                            "price": 4.29
+                        },
+                        {
+                            "item": "Sunflower Seeds",
+                            "price": 1.79
+                        },
+                        {
+                            "item": "Chia Seeds",
+                            "price": 3.99
+                        },
+                        {
+                            "item": "Flaxseed",
+                            "price": 2.49
+                        },
+                        {
+                            "item": "Peanut Butter",
+                            "price": 3.99
+                        },
+                        {
+                            "item": "Jam",
+                            "price": 2.79
+                        }
+                    ]
+                },
+                {
+                    "store_id": "s4",
+                    "store_name": "Netto",
+                    "address": "1011 Mitte Street, Berlin",
+                    "products": [
+                        {
+                            "item": "Canned Soup",
+                            "price": 0.69
+                        },
+                        {
+                            "item": "Instant Noodles",
+                            "price": 0.49
+                        },
+                        {
+                            "item": "Ramen",
+                            "price": 0.39
+                        },
+                        {
+                            "item": "Cereal Bars",
+                            "price": 1.29
+                        },
+                        {
+                            "item": "Popcorn",
+                            "price": 0.99
+                        },
+                        {
+                            "item": "Energy Bars",
+                            "price": 1.79
+                        },
+                        {
+                            "item": "Energy Drinks",
+                            "price": 1.99
+                        },
+                        {
+                            "item": "Bottled Water",
+                            "price": 0.29
+                        },
+                        {
+                            "item": "Coffee",
+                            "price": 3.49
+                        },
+                        {
+                            "item": "Tea Bags",
+                            "price": 1.99
+                        },
+                        {
+                            "item": "Canned Tuna",
+                            "price": 1.49
+                        },
+                        {
+                            "item": "Peanuts",
+                            "price": 2.99
+                        },
+                        {
+                            "item": "Dried Fruits",
+                            "price": 2.49
+                        },
+                        {
+                            "item": "Popcorn",
+                            "price": 1.79
+                        },
+                        {
+                            "item": "Sour Gummy Worms",
+                            "price": 0.99
+                        },
+                        {
+                            "item": "Chocolate Bars",
+                            "price": 1.49
+                        },
+                        {
+                            "item": "Potato Chips",
+                            "price": 1.29
+                        },
+                        {
+                            "item": "Pretzels",
+                            "price": 0.79
+                        },
+                        {
+                            "item": "Crackers",
+                            "price": 0.89
+                        },
+                        {
+                            "item": "Bread Rolls",
+                            "price": 0.99
+                        }
+                    ]
+                },
+                {
+                    "store_id": "s5",
+                    "store_name": "real",
+                    "address": "1213 Mitte Street, Berlin",
+                    "products": [
+                        {
+                            "item": "Baby Food",
+                            "price": 0.99
+                        },
+                        {
+                            "item": "Diapers",
+                            "price": 4.99
+                        },
+                        {
+                            "item": "Wet Wipes",
+                            "price": 1.49
+                        },
+                        {
+                            "item": "Baby Shampoo",
+                            "price": 2.99
+                        },
+                        {
+                            "item": "Baby Lotion",
+                            "price": 3.49
+                        },
+                        {
+                            "item": "Baby Powder",
+                            "price": 1.79
+                        },
+                        {
+                            "item": "Baby Oil",
+                            "price": 2.29
+                        },
+                        {
+                            "item": "Baby Bath",
+                            "price": 3.99
+                        },
+                        {
+                            "item": "Baby Clothes",
+                            "price": 5.99
+                        },
+                        {
+                            "item": "Baby Toys",
+                            "price": 4.49
+                        },
+                        {
+                            "item": "Baby Books",
+                            "price": 6.99
+                        },
+                        {
+                            "item": "Baby Monitors",
+                            "price": 29.99
+                        },
+                        {
+                            "item": "Baby Car Seats",
+                            "price": 49.99
+                        },
+                        {
+                            "item": "Baby Strollers",
+                            "price": 79.99
+                        },
+                        {
+                            "item": "Baby Cribs",
+                            "price": 99.99
+                        },
+                        {
+                            "item": "Baby High Chairs",
+                            "price": 39.99
+                        },
+                        {
+                            "item": "Baby Play Mats",
+                            "price": 19.99
+                        },
+                        {
+                            "item": "Baby Bottles",
+                            "price": 2.99
+                        },
+                        {
+                            "item": "Baby Pacifiers",
+                            "price": 1.49
+                        },
+                        {
+                            "item": "Baby Teethers",
+                            "price": 0.99
+                        }
+                    ]
+                }
+            ]
         },
         {
-          "store_id": "s5",
-          "store_name": "real",
-          "address": "1213 Wilmersdorf Street, Berlin",
-          "products": [
-            { "item": "Baby Food", "price": 0.99 },
-            { "item": "Diapers", "price": 4.99 },
-            { "item": "Wet Wipes", "price": 1.49 },
-            { "item": "Baby Shampoo", "price": 2.99 },
-            { "item": "Baby Lotion", "price": 3.49 },
-            { "item": "Baby Powder", "price": 1.79 },
-            { "item": "Baby Oil", "price": 2.29 },
-            { "item": "Baby Bath", "price": 3.99 },
-            { "item": "Baby Clothes", "price": 5.99 },
-            { "item": "Baby Toys", "price": 4.49 },
-            { "item": "Baby Books", "price": 6.99 },
-            { "item": "Baby Monitors", "price": 29.99 },
-            { "item": "Baby Car Seats", "price": 49.99 },
-            { "item": "Baby Strollers", "price": 79.99 },
-            { "item": "Baby Cribs", "price": 99.99 },
-            { "item": "Baby High Chairs", "price": 39.99 },
-            { "item": "Baby Play Mats", "price": 19.99 },
-            { "item": "Baby Bottles", "price": 2.99 },
-            { "item": "Baby Pacifiers", "price": 1.49 },
-            { "item": "Baby Teethers", "price": 0.99 }
-          ]
+            "district_id": "d6",
+            "dist_name": "Neuk\u00f6lln",
+            "stores": [
+                {
+                    "store_id": "s1",
+                    "store_name": "REWE",
+                    "address": "123 Neuk\u00f6lln Street, Berlin",
+                    "products": [
+                        {
+                            "item": "Organic Apples",
+                            "price": 1.99
+                        },
+                        {
+                            "item": "Oranges",
+                            "price": 2.49
+                        },
+                        {
+                            "item": "Bananas",
+                            "price": 1.29
+                        },
+                        {
+                            "item": "Milk",
+                            "price": 0.99
+                        },
+                        {
+                            "item": "Eggs",
+                            "price": 1.79
+                        },
+                        {
+                            "item": "Yogurt",
+                            "price": 1.49
+                        },
+                        {
+                            "item": "Bread",
+                            "price": 2.29
+                        },
+                        {
+                            "item": "Cheese",
+                            "price": 2.99
+                        },
+                        {
+                            "item": "Chicken",
+                            "price": 4.99
+                        },
+                        {
+                            "item": "Beef",
+                            "price": 8.99
+                        },
+                        {
+                            "item": "Fish",
+                            "price": 6.49
+                        },
+                        {
+                            "item": "Rice",
+                            "price": 1.99
+                        },
+                        {
+                            "item": "Pasta",
+                            "price": 1.49
+                        },
+                        {
+                            "item": "Tomatoes",
+                            "price": 0.79
+                        },
+                        {
+                            "item": "Potatoes",
+                            "price": 0.69
+                        },
+                        {
+                            "item": "Onions",
+                            "price": 0.49
+                        },
+                        {
+                            "item": "Spinach",
+                            "price": 1.29
+                        },
+                        {
+                            "item": "Carrots",
+                            "price": 0.99
+                        },
+                        {
+                            "item": "Applesauce",
+                            "price": 1.29
+                        },
+                        {
+                            "item": "Cereal",
+                            "price": 2.99
+                        }
+                    ]
+                },
+                {
+                    "store_id": "s2",
+                    "store_name": "ALDI Nord",
+                    "address": "456 Neuk\u00f6lln Street, Berlin",
+                    "products": [
+                        {
+                            "item": "Canned Beans",
+                            "price": 0.99
+                        },
+                        {
+                            "item": "Pasta Sauce",
+                            "price": 1.99
+                        },
+                        {
+                            "item": "Crackers",
+                            "price": 1.29
+                        },
+                        {
+                            "item": "Ham",
+                            "price": 2.99
+                        },
+                        {
+                            "item": "Salami",
+                            "price": 3.49
+                        },
+                        {
+                            "item": "Sausages",
+                            "price": 4.49
+                        },
+                        {
+                            "item": "Frozen Pizza",
+                            "price": 2.79
+                        },
+                        {
+                            "item": "Ice Cream",
+                            "price": 3.99
+                        },
+                        {
+                            "item": "Chocolate",
+                            "price": 1.79
+                        },
+                        {
+                            "item": "Chips",
+                            "price": 1.49
+                        },
+                        {
+                            "item": "Soda",
+                            "price": 0.99
+                        },
+                        {
+                            "item": "Juice",
+                            "price": 1.69
+                        },
+                        {
+                            "item": "Beer",
+                            "price": 0.79
+                        },
+                        {
+                            "item": "Wine",
+                            "price": 5.99
+                        },
+                        {
+                            "item": "Vodka",
+                            "price": 9.99
+                        },
+                        {
+                            "item": "Whiskey",
+                            "price": 12.99
+                        },
+                        {
+                            "item": "Rum",
+                            "price": 8.49
+                        },
+                        {
+                            "item": "Tequila",
+                            "price": 7.99
+                        },
+                        {
+                            "item": "Gin",
+                            "price": 11.49
+                        },
+                        {
+                            "item": "Lemonade",
+                            "price": 1.29
+                        }
+                    ]
+                },
+                {
+                    "store_id": "s3",
+                    "store_name": "EDEKA",
+                    "address": "789 Neuk\u00f6lln Street, Berlin",
+                    "products": [
+                        {
+                            "item": "Canned Corn",
+                            "price": 0.79
+                        },
+                        {
+                            "item": "Soy Milk",
+                            "price": 1.99
+                        },
+                        {
+                            "item": "Tofu",
+                            "price": 1.49
+                        },
+                        {
+                            "item": "Granola",
+                            "price": 3.49
+                        },
+                        {
+                            "item": "Almonds",
+                            "price": 2.99
+                        },
+                        {
+                            "item": "Quinoa",
+                            "price": 4.99
+                        },
+                        {
+                            "item": "Coconut Oil",
+                            "price": 5.99
+                        },
+                        {
+                            "item": "Honey",
+                            "price": 3.29
+                        },
+                        {
+                            "item": "Olive Oil",
+                            "price": 6.99
+                        },
+                        {
+                            "item": "Apple Cider Vinegar",
+                            "price": 1.99
+                        },
+                        {
+                            "item": "Maple Syrup",
+                            "price": 7.49
+                        },
+                        {
+                            "item": "Dark Chocolate",
+                            "price": 2.49
+                        },
+                        {
+                            "item": "Green Tea",
+                            "price": 1.29
+                        },
+                        {
+                            "item": "Red Wine Vinegar",
+                            "price": 2.99
+                        },
+                        {
+                            "item": "Dried Cranberries",
+                            "price": 4.29
+                        },
+                        {
+                            "item": "Sunflower Seeds",
+                            "price": 1.79
+                        },
+                        {
+                            "item": "Chia Seeds",
+                            "price": 3.99
+                        },
+                        {
+                            "item": "Flaxseed",
+                            "price": 2.49
+                        },
+                        {
+                            "item": "Peanut Butter",
+                            "price": 3.99
+                        },
+                        {
+                            "item": "Jam",
+                            "price": 2.79
+                        }
+                    ]
+                },
+                {
+                    "store_id": "s4",
+                    "store_name": "Netto",
+                    "address": "1011 Neuk\u00f6lln Street, Berlin",
+                    "products": [
+                        {
+                            "item": "Canned Soup",
+                            "price": 0.69
+                        },
+                        {
+                            "item": "Instant Noodles",
+                            "price": 0.49
+                        },
+                        {
+                            "item": "Ramen",
+                            "price": 0.39
+                        },
+                        {
+                            "item": "Cereal Bars",
+                            "price": 1.29
+                        },
+                        {
+                            "item": "Popcorn",
+                            "price": 0.99
+                        },
+                        {
+                            "item": "Energy Bars",
+                            "price": 1.79
+                        },
+                        {
+                            "item": "Energy Drinks",
+                            "price": 1.99
+                        },
+                        {
+                            "item": "Bottled Water",
+                            "price": 0.29
+                        },
+                        {
+                            "item": "Coffee",
+                            "price": 3.49
+                        },
+                        {
+                            "item": "Tea Bags",
+                            "price": 1.99
+                        },
+                        {
+                            "item": "Canned Tuna",
+                            "price": 1.49
+                        },
+                        {
+                            "item": "Peanuts",
+                            "price": 2.99
+                        },
+                        {
+                            "item": "Dried Fruits",
+                            "price": 2.49
+                        },
+                        {
+                            "item": "Popcorn",
+                            "price": 1.79
+                        },
+                        {
+                            "item": "Sour Gummy Worms",
+                            "price": 0.99
+                        },
+                        {
+                            "item": "Chocolate Bars",
+                            "price": 1.49
+                        },
+                        {
+                            "item": "Potato Chips",
+                            "price": 1.29
+                        },
+                        {
+                            "item": "Pretzels",
+                            "price": 0.79
+                        },
+                        {
+                            "item": "Crackers",
+                            "price": 0.89
+                        },
+                        {
+                            "item": "Bread Rolls",
+                            "price": 0.99
+                        }
+                    ]
+                },
+                {
+                    "store_id": "s5",
+                    "store_name": "real",
+                    "address": "1213 Neuk\u00f6lln Street, Berlin",
+                    "products": [
+                        {
+                            "item": "Baby Food",
+                            "price": 0.99
+                        },
+                        {
+                            "item": "Diapers",
+                            "price": 4.99
+                        },
+                        {
+                            "item": "Wet Wipes",
+                            "price": 1.49
+                        },
+                        {
+                            "item": "Baby Shampoo",
+                            "price": 2.99
+                        },
+                        {
+                            "item": "Baby Lotion",
+                            "price": 3.49
+                        },
+                        {
+                            "item": "Baby Powder",
+                            "price": 1.79
+                        },
+                        {
+                            "item": "Baby Oil",
+                            "price": 2.29
+                        },
+                        {
+                            "item": "Baby Bath",
+                            "price": 3.99
+                        },
+                        {
+                            "item": "Baby Clothes",
+                            "price": 5.99
+                        },
+                        {
+                            "item": "Baby Toys",
+                            "price": 4.49
+                        },
+                        {
+                            "item": "Baby Books",
+                            "price": 6.99
+                        },
+                        {
+                            "item": "Baby Monitors",
+                            "price": 29.99
+                        },
+                        {
+                            "item": "Baby Car Seats",
+                            "price": 49.99
+                        },
+                        {
+                            "item": "Baby Strollers",
+                            "price": 79.99
+                        },
+                        {
+                            "item": "Baby Cribs",
+                            "price": 99.99
+                        },
+                        {
+                            "item": "Baby High Chairs",
+                            "price": 39.99
+                        },
+                        {
+                            "item": "Baby Play Mats",
+                            "price": 19.99
+                        },
+                        {
+                            "item": "Baby Bottles",
+                            "price": 2.99
+                        },
+                        {
+                            "item": "Baby Pacifiers",
+                            "price": 1.49
+                        },
+                        {
+                            "item": "Baby Teethers",
+                            "price": 0.99
+                        }
+                    ]
+                }
+            ]
         }
-      ]
-    },
-    {
-      "district_id": "d2",
-      "dist_name": "Charlottenburg",
-      "stores": [
-        {
-          "store_id": "s1",
-          "store_name": "ALDI Nord",
-          "address": "789 Charlottenburg Street, Berlin",
-          "products": [
-            { "item": "Canned Vegetables", "price": 0.89 },
-            { "item": "Peanut Butter", "price": 1.99 },
-            { "item": "Jelly", "price": 1.49 },
-            { "item": "Bread", "price": 1.29 },
-            { "item": "Milk", "price": 0.99 },
-            { "item": "Eggs", "price": 1.79 },
-            { "item": "Butter", "price": 1.49 },
-            { "item": "Yogurt", "price": 0.79 },
-            { "item": "Cheese", "price": 2.99 },
-            { "item": "Chicken", "price": 3.99 },
-            { "item": "Beef", "price": 7.99 },
-            { "item": "Pork", "price": 5.99 },
-            { "item": "Fish", "price": 6.49 },
-            { "item": "Rice", "price": 1.99 },
-            { "item": "Pasta", "price": 1.49 },
-            { "item": "Tomatoes", "price": 0.79 },
-            { "item": "Potatoes", "price": 0.69 },
-            { "item": "Onions", "price": 0.49 },
-            { "item": "Spinach", "price": 1.29 },
-            { "item": "Carrots", "price": 0.99 },
-            { "item": "Applesauce", "price": 1.29 }
-          ]
-        },
-        {
-          "store_id": "s2",
-          "store_name": "Kaufland",
-          "address": "1011 Charlottenburg Street, Berlin",
-          "products": [
-            { "item": "Cereal", "price": 2.99 },
-            { "item": "Cookies", "price": 1.79 },
-            { "item": "Crackers", "price": 1.29 },
-            { "item": "Chips", "price": 1.49 },
-            { "item": "Chocolate", "price": 1.99 },
-            { "item": "Candy", "price": 0.99 },
-            { "item": "Soda", "price": 0.79 },
-            { "item": "Juice", "price": 1.69 },
-            { "item": "Energy Drinks", "price": 1.99 },
-            { "item": "Beer", "price": 0.89 },
-            { "item": "Wine", "price": 5.99 },
-            { "item": "Vodka", "price": 9.99 },
-            { "item": "Whiskey", "price": 12.99 },
-            { "item": "Rum", "price": 8.49 },
-            { "item": "Tequila", "price": 7.99 },
-            { "item": "Gin", "price": 11.49 },
-            { "item": "Lemonade", "price": 1.29 },
-            { "item": "Water", "price": 0.39 },
-            { "item": "Coffee", "price": 3.49 },
-            { "item": "Tea", "price": 2.49 }
-          ]
-        },
-        {
-          "store_id": "s3",
-          "store_name": "Penny Markt",
-          "address": "1213 Charlottenburg Street, Berlin",
-          "products": [
-            { "item": "Bread", "price": 1.19 },
-            { "item": "Milk", "price": 0.89 },
-            { "item": "Eggs", "price": 1.69 },
-            { "item": "Butter", "price": 1.39 },
-            { "item": "Yogurt", "price": 0.69 },
-            { "item": "Cheese", "price": 2.49 },
-            { "item": "Chicken", "price": 3.49 },
-            { "item": "Beef", "price": 6.99 },
-            { "item": "Pork", "price": 5.49 },
-            { "item": "Fish", "price": 6.99 },
-            { "item": "Rice", "price": 1.69 },
-            { "item": "Pasta", "price": 1.29 },
-            { "item": "Tomatoes", "price": 0.99 },
-            { "item": "Potatoes", "price": 0.79 },
-            { "item": "Onions", "price": 0.69 },
-            { "item": "Spinach", "price": 1.19 },
-            { "item": "Carrots", "price": 0.79 },
-            { "item": "Applesauce", "price": 1.19 },
-            { "item": "Cereal", "price": 2.49 },
-            { "item": "Cookies", "price": 1.29 }
-          ]
-        },
-        {
-          "store_id": "s4",
-          "store_name": "PENNY",
-          "address": "1415 Charlottenburg Street, Berlin",
-          "products": [
-            { "item": "Bread", "price": 1.29 },
-            { "item": "Milk", "price": 0.99 },
-            { "item": "Eggs", "price": 1.89 },
-            { "item": "Butter", "price": 1.49 },
-            { "item": "Yogurt", "price": 0.79 },
-            { "item": "Cheese", "price": 2.69 },
-            { "item": "Chicken", "price": 3.79 },
-            { "item": "Beef", "price": 7.49 },
-            { "item": "Pork", "price": 5.99 },
-            { "item": "Fish", "price": 7.49 },
-            { "item": "Rice", "price": 1.99 },
-            { "item": "Pasta", "price": 1.49 },
-            { "item": "Tomatoes", "price": 0.89 },
-            { "item": "Potatoes", "price": 0.69 },
-            { "item": "Onions", "price": 0.59 },
-            { "item": "Spinach", "price": 1.39 },
-            { "item": "Carrots", "price": 0.89 },
-            { "item": "Applesauce", "price": 1.39 },
-            { "item": "Cereal", "price": 2.79 },
-            { "item": "Cookies", "price": 1.39 }
-          ]
-        }
-      ]
-    },
-    {
-      "district_id": "d3",
-      "dist_name": "Friedrichshain",
-      "stores": [
-        {
-          "store_id": "s1",
-          "store_name": "REWE",
-          "address": "123 Friedrichshain Street, Berlin",
-          "products": [
-            { "item": "Organic Apples", "price": 1.99 },
-            { "item": "Oranges", "price": 2.49 },
-            { "item": "Bananas", "price": 1.29 },
-            { "item": "Milk", "price": 0.99 },
-            { "item": "Eggs", "price": 1.79 },
-            { "item": "Yogurt", "price": 1.49 },
-            { "item": "Bread", "price": 2.29 },
-            { "item": "Cheese", "price": 2.99 },
-            { "item": "Chicken", "price": 4.99 },
-            { "item": "Beef", "price": 8.99 },
-            { "item": "Fish", "price": 6.49 },
-            { "item": "Rice", "price": 1.99 },
-            { "item": "Pasta", "price": 1.49 },
-            { "item": "Tomatoes", "price": 0.79 },
-            { "item": "Potatoes", "price": 0.69 },
-            { "item": "Onions", "price": 0.49 },
-            { "item": "Spinach", "price": 1.29 },
-            { "item": "Carrots", "price": 0.99 },
-            { "item": "Applesauce", "price": 1.29 },
-            { "item": "Cereal", "price": 2.99 }
-          ]
-        },
-        {
-          "store_id": "s2",
-          "store_name": "ALDI Süd",
-          "address": "456 Friedrichshain Street, Berlin",
-          "products": [
-            { "item": "Canned Beans", "price": 0.99 },
-            { "item": "Pasta Sauce", "price": 1.99 },
-            { "item": "Crackers", "price": 1.29 },
-            { "item": "Ham", "price": 2.99 },
-            { "item": "Salami", "price": 3.49 },
-            { "item": "Sausages", "price": 4.49 },
-            { "item": "Frozen Pizza", "price": 2.79 },
-            { "item": "Ice Cream", "price": 3.99 },
-            { "item": "Chocolate", "price": 1.79 },
-            { "item": "Chips", "price": 1.49 },
-            { "item": "Soda", "price": 0.99 },
-            { "item": "Juice", "price": 1.69 },
-            { "item": "Beer", "price": 0.79 },
-            { "item": "Wine", "price": 5.99 },
-            { "item": "Vodka", "price": 9.99 },
-            { "item": "Whiskey", "price": 12.99 },
-            { "item": "Rum", "price": 8.49 },
-            { "item": "Tequila", "price": 7.99 },
-            { "item": "Gin", "price": 11.49 },
-            { "item": "Lemonade", "price": 1.29 }
-          ]
-        },
-        {
-          "store_id": "s3",
-          "store_name": "EDEKA",
-          "address": "789 Friedrichshain Street, Berlin",
-          "products": [
-            { "item": "Canned Corn", "price": 0.79 },
-            { "item": "Soy Milk", "price": 1.99 },
-            { "item": "Tofu", "price": 1.49 },
-            { "item": "Granola", "price": 3.49 },
-            { "item": "Almonds", "price": 2.99 },
-            { "item": "Quinoa", "price": 4.99 },
-            { "item": "Coconut Oil", "price": 5.99 },
-            { "item": "Honey", "price": 3.29 },
-            { "item": "Olive Oil", "price": 6.99 },
-            { "item": "Apple Cider Vinegar", "price": 1.99 },
-            { "item": "Maple Syrup", "price": 7.49 },
-            { "item": "Dark Chocolate", "price": 2.49 },
-            { "item": "Green Tea", "price": 1.29 },
-            { "item": "Red Wine Vinegar", "price": 2.99 },
-            { "item": "Dried Cranberries", "price": 4.29 },
-            { "item": "Sunflower Seeds", "price": 1.79 },
-            { "item": "Chia Seeds", "price": 3.99 },
-            { "item": "Flaxseed", "price": 2.49 },
-            { "item": "Peanut Butter", "price": 3.99 },
-            { "item": "Jam", "price": 2.79 }
-          ]
-        },
-        {
-          "store_id": "s4",
-          "store_name": "Netto",
-          "address": "1011 Friedrichshain Street, Berlin",
-          "products": [
-            { "item": "Canned Soup", "price": 0.69 },
-            { "item": "Instant Noodles", "price": 0.49 },
-            { "item": "Ramen", "price": 0.39 },
-            { "item": "Cereal Bars", "price": 1.29 },
-            { "item": "Popcorn", "price": 0.99 },
-            { "item": "Energy Bars", "price": 1.79 },
-            { "item": "Energy Drinks", "price": 1.99 },
-            { "item": "Bottled Water", "price": 0.29 },
-            { "item": "Coffee", "price": 3.49 },
-            { "item": "Tea Bags", "price": 1.99 },
-            { "item": "Canned Tuna", "price": 1.49 },
-            { "item": "Peanuts", "price": 2.99 },
-            { "item": "Dried Fruits", "price": 2.49 },
-            { "item": "Popcorn", "price": 1.79 },
-            { "item": "Sour Gummy Worms", "price": 0.99 },
-            { "item": "Chocolate Bars", "price": 1.49 },
-            { "item": "Potato Chips", "price": 1.29 },
-            { "item": "Pretzels", "price": 0.79 },
-            { "item": "Crackers", "price": 0.89 },
-            { "item": "Bread Rolls", "price": 0.99 }
-          ]
-        },
-        {
-          "store_id": "s5",
-          "store_name": "real",
-          "address": "1213 Friedrichshain Street, Berlin",
-          "products": [
-            { "item": "Baby Food", "price": 0.99 },
-            { "item": "Diapers", "price": 4.99 },
-            { "item": "Wet Wipes", "price": 1.49 },
-            { "item": "Baby Shampoo", "price": 2.99 },
-            { "item": "Baby Lotion", "price": 3.49 },
-            { "item": "Baby Powder", "price": 1.79 },
-            { "item": "Baby Oil", "price": 2.29 },
-            { "item": "Baby Bath", "price": 3.99 },
-            { "item": "Baby Clothes", "price": 5.99 },
-            { "item": "Baby Toys", "price": 4.49 },
-            { "item": "Baby Books", "price": 6.99 },
-            { "item": "Baby Monitors", "price": 29.99 },
-            { "item": "Baby Car Seats", "price": 49.99 },
-            { "item": "Baby Strollers", "price": 79.99 },
-            { "item": "Baby Cribs", "price": 99.99 },
-            { "item": "Baby High Chairs", "price": 39.99 },
-            { "item": "Baby Play Mats", "price": 19.99 },
-            { "item": "Baby Bottles", "price": 2.99 },
-            { "item": "Baby Pacifiers", "price": 1.49 },
-            { "item": "Baby Teethers", "price": 0.99 }
-          ]
-        }
-      ]
-    },
-    {
-      "district_id": "d4",
-      "dist_name": "Kreuzberg",
-      "stores": [
-        {
-          "store_id": "s1",
-          "store_name": "REWE",
-          "address": "123 Kreuzberg Street, Berlin",
-          "products": [
-            { "item": "Organic Apples", "price": 1.99 },
-            { "item": "Oranges", "price": 2.49 },
-            { "item": "Bananas", "price": 1.29 },
-            { "item": "Milk", "price": 0.99 },
-            { "item": "Eggs", "price": 1.79 },
-            { "item": "Yogurt", "price": 1.49 },
-            { "item": "Bread", "price": 2.29 },
-            { "item": "Cheese", "price": 2.99 },
-            { "item": "Chicken", "price": 4.99 },
-            { "item": "Beef", "price": 8.99 },
-            { "item": "Fish", "price": 6.49 },
-            { "item": "Rice", "price": 1.99 },
-            { "item": "Pasta", "price": 1.49 },
-            { "item": "Tomatoes", "price": 0.79 },
-            { "item": "Potatoes", "price": 0.69 },
-            { "item": "Onions", "price": 0.49 },
-            { "item": "Spinach", "price": 1.29 },
-            { "item": "Carrots", "price": 0.99 },
-            { "item": "Applesauce", "price": 1.29 },
-            { "item": "Cereal", "price": 2.99 }
-          ]
-        },
-        {
-          "store_id": "s2",
-          "store_name": "ALDI Süd",
-          "address": "456 Kreuzberg Street, Berlin",
-          "products": [
-            { "item": "Canned Beans", "price": 0.99 },
-            { "item": "Pasta Sauce", "price": 1.99 },
-            { "item": "Crackers", "price": 1.29 },
-            { "item": "Ham", "price": 2.99 },
-            { "item": "Salami", "price": 3.49 },
-            { "item": "Sausages", "price": 4.49 },
-            { "item": "Frozen Pizza", "price": 2.79 },
-            { "item": "Ice Cream", "price": 3.99 },
-            { "item": "Chocolate", "price": 1.79 },
-            { "item": "Chips", "price": 1.49 },
-            { "item": "Soda", "price": 0.99 },
-            { "item": "Juice", "price": 1.69 },
-            { "item": "Beer", "price": 0.79 },
-            { "item": "Wine", "price": 5.99 },
-            { "item": "Vodka", "price": 9.99 },
-            { "item": "Whiskey", "price": 12.99 },
-            { "item": "Rum", "price": 8.49 },
-            { "item": "Tequila", "price": 7.99 },
-            { "item": "Gin", "price": 11.49 },
-            { "item": "Lemonade", "price": 1.29 }
-          ]
-        },
-        {
-          "store_id": "s3",
-          "store_name": "EDEKA",
-          "address": "789 Kreuzberg Street, Berlin",
-          "products": [
-            { "item": "Canned Corn", "price": 0.79 },
-            { "item": "Soy Milk", "price": 1.99 },
-            { "item": "Tofu", "price": 1.49 },
-            { "item": "Granola", "price": 3.49 },
-            { "item": "Almonds", "price": 2.99 },
-            { "item": "Quinoa", "price": 4.99 },
-            { "item": "Coconut Oil", "price": 5.99 },
-            { "item": "Honey", "price": 3.29 },
-            { "item": "Olive Oil", "price": 6.99 },
-            { "item": "Apple Cider Vinegar", "price": 1.99 },
-            { "item": "Maple Syrup", "price": 7.49 },
-            { "item": "Dark Chocolate", "price": 2.49 },
-            { "item": "Green Tea", "price": 1.29 },
-            { "item": "Red Wine Vinegar", "price": 2.99 },
-            { "item": "Dried Cranberries", "price": 4.29 },
-            { "item": "Sunflower Seeds", "price": 1.79 },
-            { "item": "Chia Seeds", "price": 3.99 },
-            { "item": "Flaxseed", "price": 2.49 },
-            { "item": "Peanut Butter", "price": 3.99 },
-            { "item": "Jam", "price": 2.79 }
-          ]
-        },
-        {
-          "store_id": "s4",
-          "store_name": "Netto",
-          "address": "1011 Kreuzberg Street, Berlin",
-          "products": [
-            { "item": "Canned Soup", "price": 0.69 },
-            { "item": "Instant Noodles", "price": 0.49 },
-            { "item": "Ramen", "price": 0.39 },
-            { "item": "Cereal Bars", "price": 1.29 },
-            { "item": "Popcorn", "price": 0.99 },
-            { "item": "Energy Bars", "price": 1.79 },
-            { "item": "Energy Drinks", "price": 1.99 },
-            { "item": "Bottled Water", "price": 0.29 },
-            { "item": "Coffee", "price": 3.49 },
-            { "item": "Tea Bags", "price": 1.99 },
-            { "item": "Canned Tuna", "price": 1.49 },
-            { "item": "Peanuts", "price": 2.99 },
-            { "item": "Dried Fruits", "price": 2.49 },
-            { "item": "Popcorn", "price": 1.79 },
-            { "item": "Sour Gummy Worms", "price": 0.99 },
-            { "item": "Chocolate Bars", "price": 1.49 },
-            { "item": "Potato Chips", "price": 1.29 },
-            { "item": "Pretzels", "price": 0.79 },
-            { "item": "Crackers", "price": 0.89 },
-            { "item": "Bread Rolls", "price": 0.99 }
-          ]
-        },
-        {
-          "store_id": "s5",
-          "store_name": "real",
-          "address": "1213 Kreuzberg Street, Berlin",
-          "products": [
-            { "item": "Baby Food", "price": 0.99 },
-            { "item": "Diapers", "price": 4.99 },
-            { "item": "Wet Wipes", "price": 1.49 },
-            { "item": "Baby Shampoo", "price": 2.99 },
-            { "item": "Baby Lotion", "price": 3.49 },
-            { "item": "Baby Powder", "price": 1.79 },
-            { "item": "Baby Oil", "price": 2.29 },
-            { "item": "Baby Bath", "price": 3.99 },
-            { "item": "Baby Clothes", "price": 5.99 },
-            { "item": "Baby Toys", "price": 4.49 },
-            { "item": "Baby Books", "price": 6.99 },
-            { "item": "Baby Monitors", "price": 29.99 },
-            { "item": "Baby Car Seats", "price": 49.99 },
-            { "item": "Baby Strollers", "price": 79.99 },
-            { "item": "Baby Cribs", "price": 99.99 },
-            { "item": "Baby High Chairs", "price": 39.99 },
-            { "item": "Baby Play Mats", "price": 19.99 },
-            { "item": "Baby Bottles", "price": 2.99 },
-            { "item": "Baby Pacifiers", "price": 1.49 },
-            { "item": "Baby Teethers", "price": 0.99 }
-          ]
-        }
-      ]
-    },
-    {
-      "district_id": "d5",
-      "dist_name": "Mitte",
-      "stores": [
-        {
-          "store_id": "s1",
-          "store_name": "REWE",
-          "address": "123 Mitte Street, Berlin",
-          "products": [
-            { "item": "Organic Apples", "price": 1.99 },
-            { "item": "Oranges", "price": 2.49 },
-            { "item": "Bananas", "price": 1.29 },
-            { "item": "Milk", "price": 0.99 },
-            { "item": "Eggs", "price": 1.79 },
-            { "item": "Yogurt", "price": 1.49 },
-            { "item": "Bread", "price": 2.29 },
-            { "item": "Cheese", "price": 2.99 },
-            { "item": "Chicken", "price": 4.99 },
-            { "item": "Beef", "price": 8.99 },
-            { "item": "Fish", "price": 6.49 },
-            { "item": "Rice", "price": 1.99 },
-            { "item": "Pasta", "price": 1.49 },
-            { "item": "Tomatoes", "price": 0.79 },
-            { "item": "Potatoes", "price": 0.69 },
-            { "item": "Onions", "price": 0.49 },
-            { "item": "Spinach", "price": 1.29 },
-            { "item": "Carrots", "price": 0.99 },
-            { "item": "Applesauce", "price": 1.29 },
-            { "item": "Cereal", "price": 2.99 }
-          ]
-        },
-        {
-          "store_id": "s2",
-          "store_name": "ALDI Nord",
-          "address": "456 Mitte Street, Berlin",
-          "products": [
-            { "item": "Canned Beans", "price": 0.99 },
-            { "item": "Pasta Sauce", "price": 1.99 },
-            { "item": "Crackers", "price": 1.29 },
-            { "item": "Ham", "price": 2.99 },
-            { "item": "Salami", "price": 3.49 },
-            { "item": "Sausages", "price": 4.49 },
-            { "item": "Frozen Pizza", "price": 2.79 },
-            { "item": "Ice Cream", "price": 3.99 },
-            { "item": "Chocolate", "price": 1.79 },
-            { "item": "Chips", "price": 1.49 },
-            { "item": "Soda", "price": 0.99 },
-            { "item": "Juice", "price": 1.69 },
-            { "item": "Beer", "price": 0.79 },
-            { "item": "Wine", "price": 5.99 },
-            { "item": "Vodka", "price": 9.99 },
-            { "item": "Whiskey", "price": 12.99 },
-            { "item": "Rum", "price": 8.49 },
-            { "item": "Tequila", "price": 7.99 },
-            { "item": "Gin", "price": 11.49 },
-            { "item": "Lemonade", "price": 1.29 }
-          ]
-        },
-        {
-          "store_id": "s3",
-          "store_name": "EDEKA",
-          "address": "789 Mitte Street, Berlin",
-          "products": [
-            { "item": "Canned Corn", "price": 0.79 },
-            { "item": "Soy Milk", "price": 1.99 },
-            { "item": "Tofu", "price": 1.49 },
-            { "item": "Granola", "price": 3.49 },
-            { "item": "Almonds", "price": 2.99 },
-            { "item": "Quinoa", "price": 4.99 },
-            { "item": "Coconut Oil", "price": 5.99 },
-            { "item": "Honey", "price": 3.29 },
-            { "item": "Olive Oil", "price": 6.99 },
-            { "item": "Apple Cider Vinegar", "price": 1.99 },
-            { "item": "Maple Syrup", "price": 7.49 },
-            { "item": "Dark Chocolate", "price": 2.49 },
-            { "item": "Green Tea", "price": 1.29 },
-            { "item": "Red Wine Vinegar", "price": 2.99 },
-            { "item": "Dried Cranberries", "price": 4.29 },
-            { "item": "Sunflower Seeds", "price": 1.79 },
-            { "item": "Chia Seeds", "price": 3.99 },
-            { "item": "Flaxseed", "price": 2.49 },
-            { "item": "Peanut Butter", "price": 3.99 },
-            { "item": "Jam", "price": 2.79 }
-          ]
-        },
-        {
-          "store_id": "s4",
-          "store_name": "Netto",
-          "address": "1011 Mitte Street, Berlin",
-          "products": [
-            { "item": "Canned Soup", "price": 0.69 },
-            { "item": "Instant Noodles", "price": 0.49 },
-            { "item": "Ramen", "price": 0.39 },
-            { "item": "Cereal Bars", "price": 1.29 },
-            { "item": "Popcorn", "price": 0.99 },
-            { "item": "Energy Bars", "price": 1.79 },
-            { "item": "Energy Drinks", "price": 1.99 },
-            { "item": "Bottled Water", "price": 0.29 },
-            { "item": "Coffee", "price": 3.49 },
-            { "item": "Tea Bags", "price": 1.99 },
-            { "item": "Canned Tuna", "price": 1.49 },
-            { "item": "Peanuts", "price": 2.99 },
-            { "item": "Dried Fruits", "price": 2.49 },
-            { "item": "Popcorn", "price": 1.79 },
-            { "item": "Sour Gummy Worms", "price": 0.99 },
-            { "item": "Chocolate Bars", "price": 1.49 },
-            { "item": "Potato Chips", "price": 1.29 },
-            { "item": "Pretzels", "price": 0.79 },
-            { "item": "Crackers", "price": 0.89 },
-            { "item": "Bread Rolls", "price": 0.99 }
-          ]
-        },
-        {
-          "store_id": "s5",
-          "store_name": "real",
-          "address": "1213 Mitte Street, Berlin",
-          "products": [
-            { "item": "Baby Food", "price": 0.99 },
-            { "item": "Diapers", "price": 4.99 },
-            { "item": "Wet Wipes", "price": 1.49 },
-            { "item": "Baby Shampoo", "price": 2.99 },
-            { "item": "Baby Lotion", "price": 3.49 },
-            { "item": "Baby Powder", "price": 1.79 },
-            { "item": "Baby Oil", "price": 2.29 },
-            { "item": "Baby Bath", "price": 3.99 },
-            { "item": "Baby Clothes", "price": 5.99 },
-            { "item": "Baby Toys", "price": 4.49 },
-            { "item": "Baby Books", "price": 6.99 },
-            { "item": "Baby Monitors", "price": 29.99 },
-            { "item": "Baby Car Seats", "price": 49.99 },
-            { "item": "Baby Strollers", "price": 79.99 },
-            { "item": "Baby Cribs", "price": 99.99 },
-            { "item": "Baby High Chairs", "price": 39.99 },
-            { "item": "Baby Play Mats", "price": 19.99 },
-            { "item": "Baby Bottles", "price": 2.99 },
-            { "item": "Baby Pacifiers", "price": 1.49 },
-            { "item": "Baby Teethers", "price": 0.99 }
-          ]
-        }
-      ]
-    },
-    {
-      "district_id": "d6",
-      "dist_name": "Neukölln",
-      "stores": [
-        {
-          "store_id": "s1",
-          "store_name": "REWE",
-          "address": "123 Neukölln Street, Berlin",
-          "products": [
-            { "item": "Organic Apples", "price": 1.99 },
-            { "item": "Oranges", "price": 2.49 },
-            { "item": "Bananas", "price": 1.29 },
-            { "item": "Milk", "price": 0.99 },
-            { "item": "Eggs", "price": 1.79 },
-            { "item": "Yogurt", "price": 1.49 },
-            { "item": "Bread", "price": 2.29 },
-            { "item": "Cheese", "price": 2.99 },
-            { "item": "Chicken", "price": 4.99 },
-            { "item": "Beef", "price": 8.99 },
-            { "item": "Fish", "price": 6.49 },
-            { "item": "Rice", "price": 1.99 },
-            { "item": "Pasta", "price": 1.49 },
-            { "item": "Tomatoes", "price": 0.79 },
-            { "item": "Potatoes", "price": 0.69 },
-            { "item": "Onions", "price": 0.49 },
-            { "item": "Spinach", "price": 1.29 },
-            { "item": "Carrots", "price": 0.99 },
-            { "item": "Applesauce", "price": 1.29 },
-            { "item": "Cereal", "price": 2.99 }
-          ]
-        },
-        {
-          "store_id": "s2",
-          "store_name": "ALDI Nord",
-          "address": "456 Neukölln Street, Berlin",
-          "products": [
-            { "item": "Canned Beans", "price": 0.99 },
-            { "item": "Pasta Sauce", "price": 1.99 },
-            { "item": "Crackers", "price": 1.29 },
-            { "item": "Ham", "price": 2.99 },
-            { "item": "Salami", "price": 3.49 },
-            { "item": "Sausages", "price": 4.49 },
-            { "item": "Frozen Pizza", "price": 2.79 },
-            { "item": "Ice Cream", "price": 3.99 },
-            { "item": "Chocolate", "price": 1.79 },
-            { "item": "Chips", "price": 1.49 },
-            { "item": "Soda", "price": 0.99 },
-            { "item": "Juice", "price": 1.69 },
-            { "item": "Beer", "price": 0.79 },
-            { "item": "Wine", "price": 5.99 },
-            { "item": "Vodka", "price": 9.99 },
-            { "item": "Whiskey", "price": 12.99 },
-            { "item": "Rum", "price": 8.49 },
-            { "item": "Tequila", "price": 7.99 },
-            { "item": "Gin", "price": 11.49 },
-            { "item": "Lemonade", "price": 1.29 }
-          ]
-        },
-        {
-          "store_id": "s3",
-          "store_name": "EDEKA",
-          "address": "789 Neukölln Street, Berlin",
-          "products": [
-            { "item": "Canned Corn", "price": 0.79 },
-            { "item": "Soy Milk", "price": 1.99 },
-            { "item": "Tofu", "price": 1.49 },
-            { "item": "Granola", "price": 3.49 },
-            { "item": "Almonds", "price": 2.99 },
-            { "item": "Quinoa", "price": 4.99 },
-            { "item": "Coconut Oil", "price": 5.99 },
-            { "item": "Honey", "price": 3.29 },
-            { "item": "Olive Oil", "price": 6.99 },
-            { "item": "Apple Cider Vinegar", "price": 1.99 },
-            { "item": "Maple Syrup", "price": 7.49 },
-            { "item": "Dark Chocolate", "price": 2.49 },
-            { "item": "Green Tea", "price": 1.29 },
-            { "item": "Red Wine Vinegar", "price": 2.99 },
-            { "item": "Dried Cranberries", "price": 4.29 },
-            { "item": "Sunflower Seeds", "price": 1.79 },
-            { "item": "Chia Seeds", "price": 3.99 },
-            { "item": "Flaxseed", "price": 2.49 },
-            { "item": "Peanut Butter", "price": 3.99 },
-            { "item": "Jam", "price": 2.79 }
-          ]
-        },
-        {
-          "store_id": "s4",
-          "store_name": "Netto",
-          "address": "1011 Neukölln Street, Berlin",
-          "products": [
-            { "item": "Canned Soup", "price": 0.69 },
-            { "item": "Instant Noodles", "price": 0.49 },
-            { "item": "Ramen", "price": 0.39 },
-            { "item": "Cereal Bars", "price": 1.29 },
-            { "item": "Popcorn", "price": 0.99 },
-            { "item": "Energy Bars", "price": 1.79 },
-            { "item": "Energy Drinks", "price": 1.99 },
-            { "item": "Bottled Water", "price": 0.29 },
-            { "item": "Coffee", "price": 3.49 },
-            { "item": "Tea Bags", "price": 1.99 },
-            { "item": "Canned Tuna", "price": 1.49 },
-            { "item": "Peanuts", "price": 2.99 },
-            { "item": "Dried Fruits", "price": 2.49 },
-            { "item": "Popcorn", "price": 1.79 },
-            { "item": "Sour Gummy Worms", "price": 0.99 },
-            { "item": "Chocolate Bars", "price": 1.49 },
-            { "item": "Potato Chips", "price": 1.29 },
-            { "item": "Pretzels", "price": 0.79 },
-            { "item": "Crackers", "price": 0.89 },
-            { "item": "Bread Rolls", "price": 0.99 }
-          ]
-        },
-        {
-          "store_id": "s5",
-          "store_name": "real",
-          "address": "1213 Neukölln Street, Berlin",
-          "products": [
-            { "item": "Baby Food", "price": 0.99 },
-            { "item": "Diapers", "price": 4.99 },
-            { "item": "Wet Wipes", "price": 1.49 },
-            { "item": "Baby Shampoo", "price": 2.99 },
-            { "item": "Baby Lotion", "price": 3.49 },
-            { "item": "Baby Powder", "price": 1.79 },
-            { "item": "Baby Oil", "price": 2.29 },
-            { "item": "Baby Bath", "price": 3.99 },
-            { "item": "Baby Clothes", "price": 5.99 },
-            { "item": "Baby Toys", "price": 4.49 },
-            { "item": "Baby Books", "price": 6.99 },
-            { "item": "Baby Monitors", "price": 29.99 },
-            { "item": "Baby Car Seats", "price": 49.99 },
-            { "item": "Baby Strollers", "price": 79.99 },
-            { "item": "Baby Cribs", "price": 99.99 },
-            { "item": "Baby High Chairs", "price": 39.99 },
-            { "item": "Baby Play Mats", "price": 19.99 },
-            { "item": "Baby Bottles", "price": 2.99 },
-            { "item": "Baby Pacifiers", "price": 1.49 },
-            { "item": "Baby Teethers", "price": 0.99 }
-          ]
-        }
-      ]
-    }
-  ]
+    ]
 }

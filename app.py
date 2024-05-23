@@ -13,9 +13,10 @@ app.config['SQLALCHEMY_DATABASE_URI'] = "sqlite:///database.db"
 # Set the debug mode to True/False 
 app.config["DEBUG"] = True
 
-# Initialize SQLAlchemy extention
+# Initialize SQLAlchemy extension
 db = SQLAlchemy(app)
 
+# Load JSON data
 def load_json():
     try:
         json_path = os.path.join(current_app.root_path, 'berlin_store_locator.json')
@@ -24,7 +25,16 @@ def load_json():
         return data
     except Exception as error:
         current_app.logger.error(f"Error loading JSON file: {error}")
-        return data
+        return {}
+
+# Save JSON data
+def save_json(data):
+    try:
+        json_path = os.path.join(current_app.root_path, 'berlin_store_locator.json')
+        with open(json_path, 'w') as json_file:
+            json.dump(data, json_file, indent=4)
+    except Exception as error:
+        current_app.logger.error(f"Error saving JSON file: {error}")
 
 # Routes to retrieve all districts, stores, and products
 @app.route('/districts/all')
@@ -43,7 +53,7 @@ def get_all_products():
     districts = load_json().get('districts', [])
     products = [product for district in districts for store in district.get('stores', []) for product in store.get('products', [])]
     return jsonify(products)
-    
+
 @app.route('/showjson', methods=['GET'])
 def showjson():
     data = load_json()
@@ -81,18 +91,6 @@ def home():
     return """ <h1> Berlin Store locator RESTful API </h1>
      <p>description here</p> """
 
-
-def load_json():
-    try:
-        json_path = os.path.join(current_app.root_path, 'berlin_store_locator.json')
-        with open(json_path) as json_file:
-            data = json.load(json_file)
-        return data
-    except Exception as error:
-        current_app.logger.error(f"Error loading JSON file: {error}")
-        return {}
-
-
 # Request parser for PUT and PATCH requests for District
 district_put_args = reqparse.RequestParser()
 district_put_args.add_argument("district_id", type=str, help="ID of the district", required=True)
@@ -125,7 +123,7 @@ product_update_args.add_argument("item", type=str, help="Name of the product")
 product_update_args.add_argument("price", type=float, help="Price of the product")
 
 # Resource fields for marshalling
-resource_fields = {
+district_fields = {
     'district_id': fields.String,
     'dist_name': fields.String,
     'stores': fields.List(fields.Nested({
@@ -139,163 +137,223 @@ resource_fields = {
     }))
 }
 
+store_fields = {
+    'store_id': fields.String,
+    'store_name': fields.String,
+    'address': fields.String,
+    'products': fields.List(fields.Nested({
+        'item': fields.String,
+        'price': fields.Float
+    }))
+}
 
-class District(Resource):
-    @marshal_with(resource_fields)
+product_fields = {
+    'item': fields.String,
+    'price': fields.Float
+}
+
+class DistrictResource(Resource):
+    @marshal_with(district_fields)
     def get(self, district_id):
         data = load_json()
-        if district_id not in data.get('districts', {}):
-            abort(404, message="District ID not found")
-        return data['districts'][district_id], 200
+        districts = data.get('districts', [])
+        for district in districts:
+            if district['district_id'] == district_id:
+                return district, 200
+        abort(404, message="District ID not found")
 
-    @marshal_with(resource_fields)
+    @marshal_with(district_fields)
     def put(self, district_id):
         args = district_put_args.parse_args()
         data = load_json()
 
-        # Ensure 'districts' is a dictionary
-        if 'districts' not in data or not isinstance(data['districts'], dict):
-            data['districts'] = {}
+        districts = data.get('districts', [])
+        for district in districts:
+            if district['district_id'] == district_id:
+                abort(409, message="District ID already exists.")
 
-        # Add error handling and print statement here
         try:
-            stores_data = args.get("stores", "")
-            print("Stores data:", stores_data)  # Print the stores data for inspection
-            stores = json.loads(stores_data)
+            stores = json.loads(args['stores'])
         except json.JSONDecodeError as e:
-            print("Error decoding JSON:", e)
-            return {"error": "Invalid JSON data"}, 400  # Return an error response
+            return {"error": "Invalid JSON data for stores"}, 400
 
-        # Create district instance
-        district = {
+        new_district = {
             'district_id': args['district_id'],
             'dist_name': args['dist_name'],
-            "stores": stores
+            'stores': stores
         }
 
-        data['districts'][district_id] = district
-        return district, 201
+        districts.append(new_district)
+        data['districts'] = districts
+        save_json(data)
+        return new_district, 201
 
-
-    @marshal_with(resource_fields)
+    @marshal_with(district_fields)
     def patch(self, district_id):
         args = district_update_args.parse_args()
         data = load_json()
-        if district_id not in data.get('districts', {}):
-            abort(404, message="District ID not found")
-
-        district = data['districts'][district_id]
-        if args['district_id']:
-            district['district_id'] = args['district_id']
-        if args['dist_name']:
-            district['dist_name'] = args['dist_name']
-        if args['stores']:
-            district['stores'] = json.loads(args['stores'])
-
-        return district
+        districts = data.get('districts', [])
+        for district in districts:
+            if district['district_id'] == district_id:
+                if args['district_id']:
+                    district['district_id'] = args['district_id']
+                if args['dist_name']:
+                    district['dist_name'] = args['dist_name']
+                if args['stores']:
+                    try:
+                        district['stores'] = json.loads(args['stores'])
+                    except json.JSONDecodeError:
+                        return {"error": "Invalid JSON data for stores"}, 400
+                save_json(data)
+                return district, 200
+        abort(404, message="District ID not found")
 
     def delete(self, district_id):
         data = load_json()
-        if district_id not in data.get('districts', {}):
+        districts = data.get('districts', [])
+        new_districts = [district for district in districts if district['district_id'] != district_id]
+        if len(new_districts) == len(districts):
             abort(404, message="District ID not found")
-        del data['districts'][district_id]
+        data['districts'] = new_districts
+        save_json(data)
         return '', 204
 
-class Store(Resource):
-    @marshal_with(resource_fields)
+class StoreResource(Resource):
+    @marshal_with(store_fields)
     def get(self, store_id):
         data = load_json()
-        if store_id not in data.get('stores', {}):
-            abort(404, message="Store ID not found")
-        return data['stores'][store_id], 200
+        stores = []
+        for district in data.get('districts', []):
+            stores.extend(district.get('stores', []))
+        for store in stores:
+            if store['store_id'] == store_id:
+                return store, 200
+        abort(404, message="Store ID not found")
 
-    @marshal_with(resource_fields)
+    @marshal_with(store_fields)
     def put(self, store_id):
         args = store_put_args.parse_args()
         data = load_json()
-        if store_id in data.get('stores', {}):
-            abort(409, message="Store ID already taken.")
+        stores = []
+        for district in data.get('districts', []):
+            stores.extend(district.get('stores', []))
+        for store in stores:
+            if store['store_id'] == store_id:
+                abort(409, message="Store ID already taken.")
 
-        store = {
+        new_store = {
             'store_id': args['store_id'],
             'store_name': args['store_name'],
-            'address': args['address']
+            'address': args['address'],
+            'products': []
         }
-        data['stores'][store_id] = store
-        return store, 201
 
-    @marshal_with(resource_fields)
+        for district in data.get('districts', []):
+            if district['district_id'] == args['district_id']:
+                district['stores'].append(new_store)
+                save_json(data)
+                return new_store, 201
+        return {"error": "District ID not found"}, 400
+
+    @marshal_with(store_fields)
     def patch(self, store_id):
         args = store_update_args.parse_args()
         data = load_json()
-        if store_id not in data.get('stores', {}):
-            abort(404, message="Store ID not found")
-
-        store = data['stores'][store_id]
-        if args['store_id']:
-            store['store_id'] = args['store_id']
-        if args['store_name']:
-            store['store_name'] = args['store_name']
-        if args['address']:
-            store['address'] = args['address']
-
-        return store
+        stores = []
+        for district in data.get('districts', []):
+            stores.extend(district.get('stores', []))
+        for store in stores:
+            if store['store_id'] == store_id:
+                if args['store_id']:
+                    store['store_id'] = args['store_id']
+                if args['store_name']:
+                    store['store_name'] = args['store_name']
+                if args['address']:
+                    store['address'] = args['address']
+                save_json(data)
+                return store, 200
+        abort(404, message="Store ID not found")
 
     def delete(self, store_id):
         data = load_json()
-        if store_id not in data.get('stores', {}):
-            abort(404, message="Store ID not found")
-        del data['stores'][store_id]
-        return '', 204
+        for district in data.get('districts', []):
+            new_stores = [store for store in district.get('stores', []) if store['store_id'] != store_id]
+            if len(new_stores) != len(district.get('stores', [])):
+                district['stores'] = new_stores
+                save_json(data)
+                return '', 204
+        abort(404, message="Store ID not found")
 
-class Product(Resource):
-    @marshal_with(resource_fields)
+class ProductResource(Resource):
+    @marshal_with(product_fields)
     def get(self, item):
         data = load_json()
-        if item not in data.get('products', {}):
-            abort(404, message="Product not found")
-        return data['products'][item], 200
+        products = []
+        for district in data.get('districts', []):
+            for store in district.get('stores', []):
+                products.extend(store.get('products', []))
+        for product in products:
+            if product['item'] == item:
+                return product, 200
+        abort(404, message="Product not found")
 
-    @marshal_with(resource_fields)
+    @marshal_with(product_fields)
     def put(self, item):
         args = product_put_args.parse_args()
         data = load_json()
-        if item in data.get('products', {}):
-            abort(409, message="Product already taken.")
+        products = []
+        for district in data.get('districts', []):
+            for store in district.get('stores', []):
+                products.extend(store.get('products', []))
+        for product in products:
+            if product['item'] == item:
+                abort(409, message="Product already exists.")
 
-        product = {
+        new_product = {
             'item': args['item'],
             'price': args['price']
         }
-        data['products'][item] = product
-        return product, 201
 
-    @marshal_with(resource_fields)
+        for district in data.get('districts', []):
+            for store in district.get('stores', []):
+                if store['store_id'] == args['store_id']:
+                    store['products'].append(new_product)
+                    save_json(data)
+                    return new_product, 201
+        return {"error": "Store ID not found"}, 400
+
+    @marshal_with(product_fields)
     def patch(self, item):
         args = product_update_args.parse_args()
         data = load_json()
-        if item not in data.get('products', {}):
-            abort(404, message="Product not found")
-
-        product = data['products'][item]
-        if args['item']:
-            product['item'] = args['item']
-        if args['price']:
-            product['price'] = args['price']
-
-        return product
+        products = []
+        for district in data.get('districts', []):
+            for store in district.get('stores', []):
+                products.extend(store.get('products', []))
+        for product in products:
+            if product['item'] == item:
+                if args['item']:
+                    product['item'] = args['item']
+                if args['price']:
+                    product['price'] = args['price']
+                save_json(data)
+                return product, 200
+        abort(404, message="Product not found")
 
     def delete(self, item):
         data = load_json()
-        if item not in data.get('products', {}):
-            abort(404, message="Product not found")
-        del data['products'][item]
-        return '', 204
+        for district in data.get('districts', []):
+            for store in district.get('stores', []):
+                new_products = [product for product in store.get('products', []) if product['item'] != item]
+                if len(new_products) != len(store.get('products', [])):
+                    store['products'] = new_products
+                    save_json(data)
+                    return '', 204
+        abort(404, message="Product not found")
 
-api.add_resource(District, "/district/<string:district_id>")
-api.add_resource(Store, "/store/<string:store_id>")
-api.add_resource(Product, "/product/<string:item>")
-
+api.add_resource(DistrictResource, "/district/<string:district_id>")
+api.add_resource(StoreResource, "/store/<string:store_id>")
+api.add_resource(ProductResource, "/product/<string:item>")
 
 if __name__ == "__main__":
     app.run()
