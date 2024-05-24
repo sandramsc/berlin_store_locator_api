@@ -351,9 +351,9 @@ class ProductResource(Resource):
                     return '', 204
         abort(404, message="Product not found")
 
-api.add_resource(DistrictResource, "/district/<string:district_id>")
-api.add_resource(StoreResource, "/store/<string:store_id>")
-api.add_resource(ProductResource, "/product/<string:item>")
+api.add_resource(DistrictResource, "/district/<district_id>")
+api.add_resource(StoreResource, "/store/<store_id>")
+api.add_resource(ProductResource, "/product/<item>")
 
 if __name__ == "__main__":
     app.run()
