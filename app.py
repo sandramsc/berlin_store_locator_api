@@ -97,7 +97,7 @@ district_put_args.add_argument("dist_name", type=str, help="Name of the district
 district_put_args.add_argument("stores", type=str, help="Stores in the district", required=True)
 
 district_update_args = reqparse.RequestParser()
-district_update_args.add_argument("district_id", type=str, help="ID of the district")
+district_update_args.add_argument("district_id", type =str, help="ID of the district")
 district_update_args.add_argument("dist_name", type=str, help="Name of the district")
 district_update_args.add_argument("stores", type=str, help="Stores in the district")
 
@@ -163,7 +163,7 @@ class DistrictResource(Resource):
 
     @marshal_with(district_fields)
     def put(self, district_id):
-        args = district_put_args.parse_args()
+        args = request.get_json()
         data = load_json()
 
         districts = data.get('districts', [])
@@ -171,15 +171,11 @@ class DistrictResource(Resource):
             if district['district_id'] == district_id:
                 abort(409, message="District ID already exists.")
 
-        try:
-            stores = json.loads(args['stores'])
-        except json.JSONDecodeError as e:
-            return {"error": "Invalid JSON data for stores"}, 400
 
         new_district = {
             'district_id': args['district_id'],
             'dist_name': args['dist_name'],
-            'stores': stores
+            'stores': args['stores']
         }
 
         districts.append(new_district)

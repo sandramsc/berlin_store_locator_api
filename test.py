@@ -19,8 +19,8 @@ def test_get_district(district_id):
     print_response(response)
 
 # Test PUT request for a district
-def test_put_district(district_id, updates):
-    response = requests.put(BASE_URL + f"district/{district_id}", json=updates)
+def test_put_district(district_id, district_data):
+    response = requests.put(BASE_URL + f"district/{district_id}", json=district_data)
     print("PUT District:")
     print("Status Code:", response.status_code)
     print("Response Text:", response.text)
@@ -40,6 +40,23 @@ def test_delete_district(district_id,):
 
 # Example data for testing
 district_id = "d1"
+put_data = {
+    "district_id": district_id,
+    "dist_name": "New District Name",
+    "stores": [
+        {
+            "store_id": "s1",
+            "store_name": "Store 1",
+            "address": "Address 1",
+            "products": [
+                {
+                    "item": "Product 1",
+                    "price": 10.0
+                }
+            ]
+        }
+    ]
+}
 patch_data = {
     "dist_name": "Updated District Name",
     "stores": json.dumps([
@@ -62,7 +79,7 @@ patch_data = {
 #test_get_district(district_id)
 
 print("\nRunning PUT test:")
-test_put_district(district_id)
+test_put_district(district_id, put_data)
 
 #print("\nRunning PATCH test:")
 #test_patch_district(district_id, patch_data)
