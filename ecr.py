@@ -5,7 +5,7 @@ import boto3
 sts_client = boto3.client('sts')
 
 # Specify the ARN of the IAM role to assume
-role_arn = 'arn:aws:iam::162698701654:user/zero-t-hero'
+role_arn = 'arn:aws:iam::xxxxxxxxxxxx:user/zero-t-hero'
 
 # Assume the IAM role to get temporary credentials
 assumed_role = sts_client.assume_role(

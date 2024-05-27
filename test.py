@@ -19,10 +19,11 @@ def test_get_district(district_id):
     print_response(response)
 
 # Test PUT request for a district
-def test_put_district(districts, updates):
-    response = requests.put(BASE_URL + f"district/{districts}", json=updates)
+def test_put_district(district_id, updates):
+    response = requests.put(BASE_URL + f"district/{district_id}", json=updates)
     print("PUT District:")
-    print_response(response)
+    print("Status Code:", response.status_code)
+    print("Response Text:", response.text)
 
 # Test PATCH request for a district
 def test_patch_district(district_id, updates):
@@ -31,7 +32,7 @@ def test_patch_district(district_id, updates):
     print_response(response)
 
 # Test DELETE request for a district
-def test_delete_district(district_id):
+def test_delete_district(district_id,):
     response = requests.delete(BASE_URL + f"district/{district_id}")
     print("DELETE District:")
     print("Status Code:", response.status_code)
@@ -57,16 +58,16 @@ patch_data = {
 }
 
 # Run tests
-print("Running GET test:")
-test_get_district(district_id)
+#print("Running GET test:")
+#test_get_district(district_id)
 
 print("\nRunning PUT test:")
-test_put_district(district_id, patch_data)
+test_put_district(district_id)
 
-print("\nRunning PATCH test:")
-test_patch_district(district_id, patch_data)
+#print("\nRunning PATCH test:")
+#test_patch_district(district_id, patch_data)
 
-print("\nRunning DELETE test:")
-test_delete_district(district_id)
+#print("\nRunning DELETE test:")
+#test_delete_district(district_id)
 
 

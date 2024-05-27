@@ -1,4 +1,4 @@
-from flask import Flask, request, render_template, jsonify, url_for, current_app
+from flask import Flask, request, render_template, jsonify, current_app
 from flask_restful import Api, Resource, reqparse, abort, fields, marshal_with
 from flask_sqlalchemy import SQLAlchemy
 import os
@@ -88,8 +88,7 @@ db.create_all()
 
 @app.route('/', methods=['GET'])
 def home():
-    return """ <h1> Berlin Store locator RESTful API </h1>
-     <p>description here</p> """
+    return """ <h1> Berlin Store locator RESTful API </h1> """
 
 # Request parser for PUT and PATCH requests for District
 district_put_args = reqparse.RequestParser()
