@@ -26,7 +26,7 @@
 
 ## Challenges & Take away
 
-- [x]  (challenge) I chose to create this REST API because a CLI tool I am building needs an API of this structure, but I did not find one in the short time of research I did so I chose to build one. The most challenging aspect was figuring out how to create nested fields (so they'd render in the UI via code as they do in the JSON file) and test the requests so they were all successfull.
+- [x]  (challenge) I chose to create this REST API because a CLI tool I am building needs an API of this structure, after some research conducted, trying to find one that had the structure and data I needed, I chose to build one after not finding an exact fit for my requirements. The most challenging aspect was figuring out how to create nested fields (so they'd render in the UI via code as they do in the JSON file) and test the requests so they were all successfull.
  <div id="header" align="center">
   <img src="https://github.com/sandramsc/berlin_store_locator_api/assets/19821445/521f2564-bb7c-4c7c-8365-0ad758329a8a" width="1050" />
 </div>
