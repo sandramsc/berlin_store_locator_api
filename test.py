@@ -19,8 +19,8 @@ def test_get_district(district_id):
     print_response(response)
 
 # Test PUT request for a district
-def test_put_district(district_id, district_data):
-    response = requests.put(BASE_URL + f"district/{district_id}", json=district_data)
+def test_put_district(district_id, put_data):
+    response = requests.put(BASE_URL + f"district/{district_id}", json=put_data)
     print("PUT District:")
     print("Status Code:", response.status_code)
     print("Response Text:", response.text)
