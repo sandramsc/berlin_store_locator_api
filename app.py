@@ -84,7 +84,7 @@ class Product(db.Model):
     store_id = db.Column(db.String(50), db.ForeignKey('store.store_id'), nullable=False)
 
 # Create the database tables
-db.create_all()
+#db.create_all()
 
 @app.route('/', methods=['GET'])
 def home():
