@@ -14,15 +14,15 @@
 5. Created EKS cluster and Node groups
 6. Created Kubernetes Deployments and Services using Python3
 
+## Try the API
+
+[berlin_store_locator_api](https://berlin-store-locator-api.onrender.com)
+
 ### How to view the API fields:
 
 1. [Show all districts](https://berlin-store-locator-api.onrender.com/districts/all)
 2. [Show all stores](https://berlin-store-locator-api.onrender.com/stores/all)
 3. [Show all products](https://berlin-store-locator-api.onrender.com/products/all)
-
-## Try the API
-
-[berlin_store_locator_api](https://berlin-store-locator-api.onrender.com)
 
 
 ## **Tools & technologies used in this project**
