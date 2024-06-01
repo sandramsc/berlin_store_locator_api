@@ -22,7 +22,7 @@
 
 ## Try the API
 
-Access the application on Hugging Face: [berlin_store_locator_api](https://berlin-store-locator-api.onrender.com)
+[berlin_store_locator_api](https://berlin-store-locator-api.onrender.com)
 
 
 ## **Tools & technologies used in this project**
